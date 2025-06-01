@@ -1,3 +1,6 @@
 datasets
 mlruns/*
 logs/*
+*.h5
+*.png
+*.json
