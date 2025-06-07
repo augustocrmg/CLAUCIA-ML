@@ -31,7 +31,7 @@ IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = "datasets/dataset_wagner_balanceado_2"
+DATASET_PATH = "datasets/dataset_wagner_balanceado_3"
 EXPERIMENT_NAME = "EfficientNetB0-SkinCondition"
 
 # Get class names from directory structure

@@ -122,6 +122,8 @@ def balance_dataset(root_dir, output_dir=None, augmentation_factor=6):
         (lambda img: flip_image(img, horizontal=False), "v_flipped"),
         (adjust_brightness, "brightness"),
         (adjust_contrast, "contrast")
+        # TODO: Adicionar o `random_noise`
+        # TODO: Adicionar mais filtros
     ]
     
     # Processa cada classe

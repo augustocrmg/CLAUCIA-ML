@@ -15,8 +15,6 @@ import pandas as pd
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# TODO: pedir para o cursor passar a implementar um plot de matriz de confusão para todos os modelos
-
 # Enable GPU
 print("GPU Available: ", tf.config.list_physical_devices('GPU'))
 gpus = tf.config.experimental.list_physical_devices('GPU')
