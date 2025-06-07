@@ -6,6 +6,9 @@ import numpy as np
 import os
 import time
 
+# Get the directory where this script is located
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Enable GPU
 print("GPU Available: ", tf.config.list_physical_devices('GPU'))
 gpus = tf.config.experimental.list_physical_devices('GPU')
@@ -67,8 +70,10 @@ def visualize_samples(dataset):
             plt.imshow(images[i].numpy().astype("uint8"))
             plt.title(class_names[labels[i]])
             plt.axis("off")
-    plt.savefig('sample_images.png')
-    print("Sample images saved to 'sample_images.png'")
+    
+    sample_path = os.path.join(SCRIPT_DIR, 'sample_images.png')
+    plt.savefig(sample_path)
+    print(f"Sample images saved to '{sample_path}'")
 
 # Build the model with EfficientNet
 def build_model():
@@ -119,8 +124,10 @@ def plot_history(history, filename='training_history.png'):
     ax2.set_ylabel('Loss')
     ax2.set_xlabel('Epoch')
     ax2.legend()
-    plt.savefig(filename)
-    print(f"Training history saved to '{filename}'")
+    
+    plot_path = os.path.join(SCRIPT_DIR, filename)
+    plt.savefig(plot_path)
+    print(f"Training history saved to '{plot_path}'")
 
 # Unfreeze and fine-tune model
 def unfreeze_model(model, base_model):
@@ -158,15 +165,18 @@ def predict_image(model, image_path):
     plt.imshow(img)
     plt.title(f"Predicted: {class_names[predicted_class]} ({confidence:.2f})")
     plt.axis("off")
-    plt.savefig('prediction_result.png')
-    print("Prediction visualization saved to 'prediction_result.png'")
+    
+    pred_path = os.path.join(SCRIPT_DIR, 'prediction_result.png')
+    plt.savefig(pred_path)
+    print(f"Prediction visualization saved to '{pred_path}'")
     
     return class_names[predicted_class], confidence, {class_names[i]: float(predictions[0][i]) for i in range(len(class_names))}
 
 # Save the model
-def save_model(model, filename="skin_condition_model"):
-    model.save(f"{filename}.h5")
-    print(f"Model saved as {filename}.h5")
+def save_model(model, filename="efficientnet_b0_244"):
+    model_path = os.path.join(SCRIPT_DIR, f"{filename}.h5")
+    model.save(model_path)
+    print(f"Model saved as {model_path}")
 
 # Main execution
 def main():
@@ -213,7 +223,7 @@ def main():
     plot_history(fine_tune_history, 'fine_tuning_history.png')
     
     # Save the model
-    save_model(model, "skin_condition_efficientnet_model")
+    save_model(model, "efficientnet_b0_244")
     
     # Calculate total time
     total_time = time.time() - start_time
