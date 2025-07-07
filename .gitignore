@@ -8,3 +8,8 @@ logs/*
 *.h5
 *.png
 *.json
+*.log
+**/mlruns/*
+**/*.pyc
+*.tflite
+**/*.tflite
