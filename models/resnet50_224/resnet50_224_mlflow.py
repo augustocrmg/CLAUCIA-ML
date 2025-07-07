@@ -11,6 +11,9 @@ import json
 from sklearn.metrics import confusion_matrix, classification_report
 import seaborn as sns
 import pandas as pd
+from collections import defaultdict
+import random
+import glob
 
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -27,11 +30,11 @@ if gpus:
         print(e)
 
 # Configuration
-IMAGE_SIZE = (224, 224)
-BATCH_SIZE = 32
+IMAGE_SIZE = (600, 600)
+BATCH_SIZE = 6
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = "datasets/dataset_wagner_balanceado_2"
+DATASET_PATH = "datasets/dataset_wagner_balanceado_3"
 EXPERIMENT_NAME = "ResNet50-SkinCondition"
 
 # Get class names from directory structure
@@ -52,40 +55,161 @@ def sanitize_mlflow_metric_name(name):
 
 # Data loading and preparation
 def prepare_dataset():
-    train_ds = tf.keras.preprocessing.image_dataset_from_directory(
-        DATASET_PATH,
-        validation_split=0.2, 
-        subset="training",
-        seed=42,
-        image_size=IMAGE_SIZE,
-        batch_size=BATCH_SIZE,
-    )
+    """
+    Prepare dataset with balanced split: 70% train, 10% validation, 20% test
+    Ensures each class has the same proportion in each split
     
-    val_ds = tf.keras.preprocessing.image_dataset_from_directory(
-        DATASET_PATH,
-        validation_split=0.2,
-        subset="validation",
-        seed=42,
-        image_size=IMAGE_SIZE,
-        batch_size=BATCH_SIZE,
-    )
+    This function implements a more controlled approach than tensorflow's 
+    image_dataset_from_directory to guarantee balanced splits:
     
-    # Apply ResNet-specific preprocessing
-    train_ds = train_ds.map(
-        lambda x, y: (keras.applications.resnet.preprocess_input(x), y),
-        num_parallel_calls=tf.data.AUTOTUNE
-    )
+    1. Analyzes the dataset structure and counts images per class
+    2. Creates balanced splits by dividing each class individually:
+       - 70% of each class goes to training
+       - 10% of each class goes to validation  
+       - 20% of each class goes to test
+    3. Shuffles files within each class before splitting (reproducible with seed=42)
+    4. Creates TensorFlow datasets with proper batching and prefetching
+    5. Provides detailed statistics about the final split distribution
     
-    val_ds = val_ds.map(
-        lambda x, y: (keras.applications.resnet.preprocess_input(x), y),
-        num_parallel_calls=tf.data.AUTOTUNE
-    )
+    Returns:
+        train_ds: Training dataset (70% of total data)
+        val_ds: Validation dataset (10% of total data) 
+        test_ds: Test dataset (20% of total data)
+    """
+    # First, analyze the dataset structure
+    print("Analyzing dataset structure...")
+    class_files = defaultdict(list)
+    total_files = 0
     
-    # Use buffered prefetching to load images from disk without I/O blocking
-    train_ds = train_ds.prefetch(buffer_size=tf.data.AUTOTUNE)
-    val_ds = val_ds.prefetch(buffer_size=tf.data.AUTOTUNE)
+    for class_name in class_names:
+        class_path = os.path.join(DATASET_PATH, class_name)
+        if os.path.isdir(class_path):
+            # Get all image files for this class
+            extensions = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.gif', '*.tiff']
+            files = []
+            for ext in extensions:
+                files.extend(glob.glob(os.path.join(class_path, ext)))
+                files.extend(glob.glob(os.path.join(class_path, ext.upper())))
+            
+            class_files[class_name] = files
+            total_files += len(files)
+            print(f"Class {class_name}: {len(files)} images")
     
-    return train_ds, val_ds
+    print(f"Total images: {total_files}")
+    
+    # Check if dataset is balanced
+    class_counts = [len(files) for files in class_files.values()]
+    min_count = min(class_counts)
+    max_count = max(class_counts)
+    
+    print(f"Min images per class: {min_count}")
+    print(f"Max images per class: {max_count}")
+    
+    if max_count - min_count > min_count * 0.1:  # If difference > 10% of min
+        print("WARNING: Dataset appears unbalanced!")
+        for class_name, files in class_files.items():
+            print(f"  {class_name}: {len(files)} images ({len(files)/total_files*100:.1f}%)")
+    else:
+        print("Dataset appears balanced ✓")
+    
+    # Create balanced splits for each class
+    train_files = []
+    val_files = []
+    test_files = []
+    
+    # Set random seed for reproducibility
+    random.seed(42)
+    
+    print("Creating balanced splits...")
+    for class_name, files in class_files.items():
+        # Shuffle files for this class
+        files_shuffled = files.copy()
+        random.shuffle(files_shuffled)
+        
+        n_files = len(files_shuffled)
+        n_train = int(n_files * 0.70)
+        n_val = int(n_files * 0.10)
+        #n_val = int(n_files * 0.15)
+        n_test = n_files - n_train - n_val  # Remaining files go to test
+        
+        # Split files
+        class_train = files_shuffled[:n_train]
+        class_val = files_shuffled[n_train:n_train + n_val]
+        class_test = files_shuffled[n_train + n_val:]
+        
+        train_files.extend([(f, class_name) for f in class_train])
+        val_files.extend([(f, class_name) for f in class_val])
+        test_files.extend([(f, class_name) for f in class_test])
+        
+        print(f"  {class_name}: {len(class_train)} train, {len(class_val)} val, {len(class_test)} test")
+    
+    # Shuffle the final splits
+    random.shuffle(train_files)
+    random.shuffle(val_files)
+    random.shuffle(test_files)
+    
+    print(f"Final splits:")
+    print(f"  Train: {len(train_files)} images ({len(train_files)/total_files*100:.1f}%)")
+    print(f"  Validation: {len(val_files)} images ({len(val_files)/total_files*100:.1f}%)")
+    print(f"  Test: {len(test_files)} images ({len(test_files)/total_files*100:.1f}%)")
+    
+    # Create class name to index mapping
+    class_to_idx = {class_name: idx for idx, class_name in enumerate(class_names)}
+    
+    # Helper function to create dataset from file list
+    def create_dataset_from_files(file_list, batch_size=BATCH_SIZE):
+        def generator():
+            for file_path, class_name in file_list:
+                # Load and preprocess image
+                img = tf.keras.preprocessing.image.load_img(file_path, target_size=IMAGE_SIZE)
+                img_array = tf.keras.preprocessing.image.img_to_array(img)
+                img_array = tf.cast(img_array, tf.float32)
+                
+                # Get class index
+                class_idx = class_to_idx[class_name]
+                
+                yield img_array, class_idx
+        
+        # Create dataset
+        dataset = tf.data.Dataset.from_generator(
+            generator,
+            output_signature=(
+                tf.TensorSpec(shape=(*IMAGE_SIZE, 3), dtype=tf.float32),
+                tf.TensorSpec(shape=(), dtype=tf.int32)
+            )
+        )
+        
+        # Batch and prefetch
+        dataset = dataset.batch(batch_size)
+        dataset = dataset.prefetch(buffer_size=tf.data.AUTOTUNE)
+        
+        return dataset
+    
+    # Create datasets
+    print("Creating TensorFlow datasets...")
+    train_ds = create_dataset_from_files(train_files)
+    val_ds = create_dataset_from_files(val_files)
+    test_ds = create_dataset_from_files(test_files)
+    
+    # Verify class distribution in each split
+    print("Verifying class distribution:")
+    
+    def count_classes_in_split(file_list, split_name):
+        class_counts = defaultdict(int)
+        for _, class_name in file_list:
+            class_counts[class_name] += 1
+        
+        print(f"{split_name} split distribution:")
+        for class_name in class_names:
+            count = class_counts[class_name]
+            percentage = count / len(file_list) * 100 if file_list else 0
+            print(f"  {class_name}: {count} images ({percentage:.1f}%)")
+    
+    count_classes_in_split(train_files, "Train")
+    count_classes_in_split(val_files, "Validation")  
+    count_classes_in_split(test_files, "Test")
+    
+    return train_ds, val_ds, test_ds
 
 # Visualize some samples
 def visualize_samples(dataset):
@@ -562,19 +686,26 @@ def main():
             "num_classes": NUM_CLASSES,
             "classes": str(class_names),
             "dataset_path": DATASET_PATH,
-            "model_architecture": "ResNet50"
+            "model_architecture": "ResNet50",
+            "train_split": "70%",
+            "validation_split": "10%",
+            "test_split": "20%",
+            "balanced_splits": "True",
+            "split_strategy": "per_class_balanced"
         }
         mlflow.log_params(params)
         
         # Prepare dataset
         print("Preparing dataset...")
-        train_ds, val_ds = prepare_dataset()
+        train_ds, val_ds, test_ds = prepare_dataset()
         
         # Log dataset size
         train_size = sum(1 for _ in train_ds)
         val_size = sum(1 for _ in val_ds)
+        test_size = sum(1 for _ in test_ds)
         mlflow.log_metric("train_batches", train_size)
         mlflow.log_metric("val_batches", val_size)
+        mlflow.log_metric("test_batches", test_size)
         
         # Display some sample images
         print("Visualizing sample images...")
@@ -652,9 +783,15 @@ def main():
         
         # Evaluate model with confusion matrix and detailed metrics
         print("\n" + "="*60)
-        print("EVALUATING MODEL PERFORMANCE - ResNet50")
+        print("EVALUATING MODEL PERFORMANCE ON TEST SET")
         print("="*60)
-        cm, classification_report_dict, class_accuracies = evaluate_model_with_confusion_matrix(model, val_ds, class_names)
+        cm, classification_report_dict, class_accuracies = evaluate_model_with_confusion_matrix(model, test_ds, class_names)
+        
+        # Also evaluate on validation set for comparison
+        print("\n" + "="*60)
+        print("EVALUATING MODEL PERFORMANCE ON VALIDATION SET (for comparison)")
+        print("="*60)
+        cm_val, classification_report_dict_val, class_accuracies_val = evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names)
         
         # Save the model
         save_model(model, "resnet50_224")

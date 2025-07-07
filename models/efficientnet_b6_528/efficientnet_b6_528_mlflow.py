@@ -11,6 +11,9 @@ import json
 from sklearn.metrics import confusion_matrix, classification_report
 import seaborn as sns
 import pandas as pd
+import glob
+import random
+from collections import defaultdict
 
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -31,7 +34,7 @@ IMAGE_SIZE = (528, 528)  # EfficientNetB6 optimized input size
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = "datasets/dataset_wagner_balanceado_2"
+DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_balanceado_2")
 EXPERIMENT_NAME = "EfficientNetB6-SkinCondition"
 
 # Get class names from directory structure
@@ -52,29 +55,161 @@ def sanitize_mlflow_metric_name(name):
 
 # Data loading and preparation
 def prepare_dataset():
-    train_ds = tf.keras.preprocessing.image_dataset_from_directory(
-        DATASET_PATH,
-        validation_split=0.2,
-        subset="training",
-        seed=42,
-        image_size=IMAGE_SIZE,
-        batch_size=BATCH_SIZE,
-    )
+    """
+    Prepare dataset with balanced split: 70% train, 10% validation, 20% test
+    Ensures each class has the same proportion in each split
     
-    val_ds = tf.keras.preprocessing.image_dataset_from_directory(
-        DATASET_PATH,
-        validation_split=0.2,
-        subset="validation",
-        seed=42,
-        image_size=IMAGE_SIZE,
-        batch_size=BATCH_SIZE,
-    )
+    This function implements a more controlled approach than tensorflow's 
+    image_dataset_from_directory to guarantee balanced splits:
     
-    # Use buffered prefetching to load images from disk without I/O blocking
-    train_ds = train_ds.prefetch(buffer_size=tf.data.AUTOTUNE)
-    val_ds = val_ds.prefetch(buffer_size=tf.data.AUTOTUNE)
+    1. Analyzes the dataset structure and counts images per class
+    2. Creates balanced splits by dividing each class individually:
+       - 70% of each class goes to training
+       - 10% of each class goes to validation  
+       - 20% of each class goes to test
+    3. Shuffles files within each class before splitting (reproducible with seed=42)
+    4. Creates TensorFlow datasets with proper batching and prefetching
+    5. Provides detailed statistics about the final split distribution
     
-    return train_ds, val_ds
+    Returns:
+        train_ds: Training dataset (70% of total data)
+        val_ds: Validation dataset (10% of total data) 
+        test_ds: Test dataset (20% of total data)
+    """
+    # First, analyze the dataset structure
+    print("Analyzing dataset structure...")
+    class_files = defaultdict(list)
+    total_files = 0
+    
+    for class_name in class_names:
+        class_path = os.path.join(DATASET_PATH, class_name)
+        if os.path.isdir(class_path):
+            # Get all image files for this class
+            extensions = ['*.jpg', '*.jpeg', '*.png', '*.bmp', '*.gif', '*.tiff']
+            files = []
+            for ext in extensions:
+                files.extend(glob.glob(os.path.join(class_path, ext)))
+                files.extend(glob.glob(os.path.join(class_path, ext.upper())))
+            
+            class_files[class_name] = files
+            total_files += len(files)
+            print(f"Class {class_name}: {len(files)} images")
+    
+    print(f"\nTotal images: {total_files}")
+    
+    # Check if dataset is balanced
+    class_counts = [len(files) for files in class_files.values()]
+    min_count = min(class_counts)
+    max_count = max(class_counts)
+    
+    print(f"Min images per class: {min_count}")
+    print(f"Max images per class: {max_count}")
+    
+    if max_count - min_count > min_count * 0.1:  # If difference > 10% of min
+        print("WARNING: Dataset appears unbalanced!")
+        for class_name, files in class_files.items():
+            print(f"  {class_name}: {len(files)} images ({len(files)/total_files*100:.1f}%)")
+    else:
+        print("Dataset appears balanced ✓")
+    
+    # Create balanced splits for each class
+    train_files = []
+    val_files = []
+    test_files = []
+    
+    # Set random seed for reproducibility
+    random.seed(42)
+    
+    print("\nCreating balanced splits...")
+    for class_name, files in class_files.items():
+        # Shuffle files for this class
+        files_shuffled = files.copy()
+        random.shuffle(files_shuffled)
+        
+        n_files = len(files_shuffled)
+        n_train = int(n_files * 0.70)
+        n_val = int(n_files * 0.10)
+        #n_val = int(n_files * 0.15)
+        n_test = n_files - n_train - n_val  # Remaining files go to test
+        
+        # Split files
+        class_train = files_shuffled[:n_train]
+        class_val = files_shuffled[n_train:n_train + n_val]
+        class_test = files_shuffled[n_train + n_val:]
+        
+        train_files.extend([(f, class_name) for f in class_train])
+        val_files.extend([(f, class_name) for f in class_val])
+        test_files.extend([(f, class_name) for f in class_test])
+        
+        print(f"  {class_name}: {len(class_train)} train, {len(class_val)} val, {len(class_test)} test")
+    
+    # Shuffle the final splits
+    random.shuffle(train_files)
+    random.shuffle(val_files)
+    random.shuffle(test_files)
+    
+    print(f"\nFinal splits:")
+    print(f"  Train: {len(train_files)} images ({len(train_files)/total_files*100:.1f}%)")
+    print(f"  Validation: {len(val_files)} images ({len(val_files)/total_files*100:.1f}%)")
+    print(f"  Test: {len(test_files)} images ({len(test_files)/total_files*100:.1f}%)")
+    
+    # Create class name to index mapping
+    class_to_idx = {class_name: idx for idx, class_name in enumerate(class_names)}
+    
+    # Helper function to create dataset from file list
+    def create_dataset_from_files(file_list, batch_size=BATCH_SIZE):
+        def generator():
+            for file_path, class_name in file_list:
+                # Load and preprocess image
+                img = tf.keras.preprocessing.image.load_img(file_path, target_size=IMAGE_SIZE)
+                img_array = tf.keras.preprocessing.image.img_to_array(img)
+                img_array = tf.cast(img_array, tf.float32)
+                
+                # Get class index
+                class_idx = class_to_idx[class_name]
+                
+                yield img_array, class_idx
+        
+        # Create dataset
+        dataset = tf.data.Dataset.from_generator(
+            generator,
+            output_signature=(
+                tf.TensorSpec(shape=(*IMAGE_SIZE, 3), dtype=tf.float32),
+                tf.TensorSpec(shape=(), dtype=tf.int32)
+            )
+        )
+        
+        # Batch and prefetch
+        dataset = dataset.batch(batch_size)
+        dataset = dataset.prefetch(buffer_size=tf.data.AUTOTUNE)
+        
+        return dataset
+    
+    # Create datasets
+    print("\nCreating TensorFlow datasets...")
+    train_ds = create_dataset_from_files(train_files)
+    val_ds = create_dataset_from_files(val_files)
+    test_ds = create_dataset_from_files(test_files)
+    
+    # Verify class distribution in each split
+    print("\nVerifying class distribution:")
+    
+    def count_classes_in_split(file_list, split_name):
+        class_counts = defaultdict(int)
+        for _, class_name in file_list:
+            class_counts[class_name] += 1
+        
+        print(f"\n{split_name} split distribution:")
+        for class_name in class_names:
+            count = class_counts[class_name]
+            percentage = count / len(file_list) * 100 if file_list else 0
+            print(f"  {class_name}: {count} images ({percentage:.1f}%)")
+    
+    count_classes_in_split(train_files, "Train")
+    count_classes_in_split(val_files, "Validation")  
+    count_classes_in_split(test_files, "Test")
+    
+    return train_ds, val_ds, test_ds
 
 # Visualize some samples
 def visualize_samples(dataset):
@@ -219,19 +354,25 @@ def main():
     
     with mlflow.start_run():
         print("Loading and preparing data...")
-        train_ds, val_ds = prepare_dataset()
+        train_ds, val_ds, test_ds = prepare_dataset()
         
         # Log parameters
-        mlflow.log_param("image_size", IMAGE_SIZE)
-        mlflow.log_param("batch_size", BATCH_SIZE)
-        mlflow.log_param("epochs_initial", EPOCHS_INITIAL)
-        mlflow.log_param("epochs_fine_tuning", EPOCHS_FINE_TUNING)
-        mlflow.log_param("num_classes", NUM_CLASSES)
-        mlflow.log_param("model_type", "EfficientNetB6")
-        
-        # Log dataset information
-        mlflow.log_param("dataset_path", DATASET_PATH)
-        mlflow.log_param("class_names", str(class_names))
+        params = {
+            "image_size": f"{IMAGE_SIZE[0]}x{IMAGE_SIZE[1]}",
+            "batch_size": BATCH_SIZE,
+            "epochs_initial": EPOCHS_INITIAL,
+            "epochs_fine_tuning": EPOCHS_FINE_TUNING,
+            "num_classes": NUM_CLASSES,
+            "classes": str(class_names),
+            "dataset_path": DATASET_PATH,
+            "model_architecture": "EfficientNetB6",
+            "train_split": "70%",
+            "validation_split": "10%",
+            "test_split": "20%",
+            "balanced_splits": "True",
+            "split_strategy": "per_class_balanced"
+        }
+        mlflow.log_params(params)
         
         print("Visualizing sample images...")
         visualize_samples(train_ds)
@@ -300,18 +441,17 @@ def main():
         
         print(f"\nTotal training time: {total_training_time/60:.2f} minutes")
         
-        # Final evaluation
-        print("\n=== Final Evaluation ===")
-        test_loss, test_accuracy = model.evaluate(val_ds, verbose=0)
-        print(f"Final Test Accuracy: {test_accuracy:.4f}")
-        print(f"Final Test Loss: {test_loss:.4f}")
+        # Evaluate model with confusion matrix and detailed metrics
+        print("\n" + "="*60)
+        print("EVALUATING MODEL PERFORMANCE ON TEST SET")
+        print("="*60)
+        cm, classification_report_dict, class_accuracies = evaluate_model_with_confusion_matrix(model, test_ds, class_names)
         
-        # Log final metrics
-        mlflow.log_metric("final_test_accuracy", test_accuracy)
-        mlflow.log_metric("final_test_loss", test_loss)
-        
-        # Detailed evaluation with confusion matrix
-        evaluate_model_with_confusion_matrix(model, val_ds, class_names)
+        # Also evaluate on validation set for comparison
+        print("\n" + "="*60)
+        print("EVALUATING MODEL PERFORMANCE ON VALIDATION SET (for comparison)")
+        print("="*60)
+        cm_val, classification_report_dict_val, class_accuracies_val = evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names)
         
         # Save the model
         save_model(model)
@@ -395,6 +535,88 @@ def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
     
     print(f"Classification report saved to '{report_path}'")
     mlflow.log_artifact(report_path)
+
+    return cm, report, class_accuracies
+
+def evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names):
+    """
+    Evaluate the model and generate confusion matrix and classification report
+    """
+    # Get predictions
+    y_true = []
+    y_pred = []
+    
+    for images, labels in val_ds:
+        predictions = model.predict(images, verbose=0)
+        y_true.extend(labels.numpy())
+        y_pred.extend(np.argmax(predictions, axis=1))
+    
+    # Confusion matrix
+    cm = confusion_matrix(y_true, y_pred)
+    
+    # Plot confusion matrix
+    plt.figure(figsize=(10, 8))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=class_names, yticklabels=class_names)
+    plt.title('Confusion Matrix - EfficientNetB6')
+    plt.ylabel('True Label')
+    plt.xlabel('Predicted Label')
+    
+    cm_path = os.path.join(SCRIPT_DIR, 'confusion_matrix_validation.png')
+    plt.savefig(cm_path, dpi=300, bbox_inches='tight')
+    print(f"Confusion matrix saved to '{cm_path}'")
+    
+    # Log confusion matrix as artifact
+    mlflow.log_artifact(cm_path)
+    
+    # Classification report
+    report = classification_report(y_true, y_pred, target_names=class_names, output_dict=True)
+    
+    # Pretty print the report
+    print("\nClassification Report:")
+    print(classification_report(y_true, y_pred, target_names=class_names))
+    
+    # Log individual class metrics to MLflow
+    for class_name, metrics in report.items():
+        if isinstance(metrics, dict):
+            sanitized_class_name = sanitize_mlflow_metric_name(class_name)
+            for metric_name, value in metrics.items():
+                if metric_name in ['precision', 'recall', 'f1-score', 'support']:
+                    mlflow.log_metric(f"{sanitized_class_name}_{metric_name}", value)
+    
+    # Log overall metrics
+    if 'accuracy' in report:
+        mlflow.log_metric("overall_accuracy", report['accuracy'])
+    if 'macro avg' in report:
+        mlflow.log_metric("macro_avg_f1_score", report['macro avg']['f1-score'])
+        mlflow.log_metric("macro_avg_precision", report['macro avg']['precision'])
+        mlflow.log_metric("macro_avg_recall", report['macro avg']['recall'])
+    if 'weighted avg' in report:
+        mlflow.log_metric("weighted_avg_f1_score", report['weighted avg']['f1-score'])
+        mlflow.log_metric("weighted_avg_precision", report['weighted avg']['precision'])
+        mlflow.log_metric("weighted_avg_recall", report['weighted avg']['recall'])
+    
+    # Save classification report as JSON
+    report_path = os.path.join(SCRIPT_DIR, 'classification_report_validation.json')
+    
+    # Custom JSON encoder to handle numpy types
+    class NumpyJSONEncoder(json.JSONEncoder):
+        def default(self, obj):
+            if isinstance(obj, np.integer):
+                return int(obj)
+            elif isinstance(obj, np.floating):
+                return float(obj)
+            elif isinstance(obj, np.ndarray):
+                return obj.tolist()
+            return super().default(obj)
+    
+    with open(report_path, 'w') as f:
+        json.dump(report, f, indent=2, cls=NumpyJSONEncoder)
+    
+    print(f"Classification report saved to '{report_path}'")
+    mlflow.log_artifact(report_path)
+
+    return cm, report, class_accuracies_val
 
 if __name__ == "__main__":
     main() 

@@ -34,7 +34,7 @@ IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = "datasets/dataset_wagner_balanceado_3"
+DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_v4_balanceado")
 EXPERIMENT_NAME = "EfficientNetB0-SkinCondition"
 
 # Get class names from directory structure
