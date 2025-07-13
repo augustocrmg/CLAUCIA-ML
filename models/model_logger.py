@@ -14,7 +14,10 @@ def save_training_results(
     valid_acc,
     train_fine_tuning_acc,
     valid_finetuning_acc,
-    output_dir="../models_results"
+    output_dir="../models_results",
+    model_params=None,
+    training_start_time=None,
+    training_end_time=None
 ):
     """
     Save training results to JSON file.
@@ -30,6 +33,9 @@ def save_training_results(
         train_fine_tuning_acc: Final training accuracy from fine-tuning
         valid_finetuning_acc: Final validation accuracy from fine-tuning
         output_dir: Directory to save the JSON file
+        model_params: Number of parameters in the model
+        training_start_time: Datetime when training started
+        training_end_time: Datetime when training ended
     """
     
     # Create output directory if it doesn't exist
@@ -48,6 +54,14 @@ def save_training_results(
         "valid_finetuning_acc": float(valid_finetuning_acc),
         "data_rodada": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
+    
+    # Add new fields if provided
+    if model_params is not None:
+        results["model_params"] = model_params
+    if training_start_time is not None:
+        results["training_start_time"] = training_start_time.strftime("%Y-%m-%d %H:%M:%S")
+    if training_end_time is not None:
+        results["training_end_time"] = training_end_time.strftime("%Y-%m-%d %H:%M:%S")
     
     # Generate filename with pattern {model_name}_{date}.json
     date_str = datetime.now().strftime("%Y-%m-%d")

@@ -14,6 +14,7 @@ import pandas as pd
 import glob
 import random
 from collections import defaultdict
+from datetime import datetime
 
 # Import the model logger
 import sys
@@ -35,7 +36,7 @@ if gpus:
         print(e)
 
 # Configuration
-IMAGE_SIZE = (456, 456)  # EfficientNetB5 optimized input size
+IMAGE_SIZE = (456, 456)
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
@@ -61,7 +62,7 @@ def sanitize_mlflow_metric_name(name):
 # Data loading and preparation
 def prepare_dataset():
     """
-    Prepare dataset with balanced split: 70% train, 10% validation, 20% test
+    Prepare dataset with balanced split: 70% train, 15% validation, 15% test
     Ensures each class has the same proportion in each split
     
     This function implements a more controlled approach than tensorflow's 
@@ -70,16 +71,16 @@ def prepare_dataset():
     1. Analyzes the dataset structure and counts images per class
     2. Creates balanced splits by dividing each class individually:
        - 70% of each class goes to training
-       - 10% of each class goes to validation  
-       - 20% of each class goes to test
+       - 15% of each class goes to validation  
+       - 15% of each class goes to test
     3. Shuffles files within each class before splitting (reproducible with seed=42)
     4. Creates TensorFlow datasets with proper batching and prefetching
     5. Provides detailed statistics about the final split distribution
     
     Returns:
         train_ds: Training dataset (70% of total data)
-        val_ds: Validation dataset (10% of total data) 
-        test_ds: Test dataset (20% of total data)
+        val_ds: Validation dataset (15% of total data) 
+        test_ds: Test dataset (15% of total data)
     """
     # First, analyze the dataset structure
     print("Analyzing dataset structure...")
@@ -100,7 +101,7 @@ def prepare_dataset():
             total_files += len(files)
             print(f"Class {class_name}: {len(files)} images")
     
-    print(f"Total images: {total_files}")
+    print(f"\nTotal images: {total_files}")
     
     # Check if dataset is balanced
     class_counts = [len(files) for files in class_files.values()]
@@ -125,7 +126,7 @@ def prepare_dataset():
     # Set random seed for reproducibility
     random.seed(42)
     
-    print("Creating balanced splits...")
+    print("\nCreating balanced splits...")
     for class_name, files in class_files.items():
         # Shuffle files for this class
         files_shuffled = files.copy()
@@ -153,7 +154,7 @@ def prepare_dataset():
     random.shuffle(val_files)
     random.shuffle(test_files)
     
-    print(f"Final splits:")
+    print(f"\nFinal splits:")
     print(f"  Train: {len(train_files)} images ({len(train_files)/total_files*100:.1f}%)")
     print(f"  Validation: {len(val_files)} images ({len(val_files)/total_files*100:.1f}%)")
     print(f"  Test: {len(test_files)} images ({len(test_files)/total_files*100:.1f}%)")
@@ -191,20 +192,20 @@ def prepare_dataset():
         return dataset
     
     # Create datasets
-    print("Creating TensorFlow datasets...")
+    print("\nCreating TensorFlow datasets...")
     train_ds = create_dataset_from_files(train_files)
     val_ds = create_dataset_from_files(val_files)
     test_ds = create_dataset_from_files(test_files)
     
     # Verify class distribution in each split
-    print("Verifying class distribution:")
+    print("\nVerifying class distribution:")
     
     def count_classes_in_split(file_list, split_name):
         class_counts = defaultdict(int)
         for _, class_name in file_list:
             class_counts[class_name] += 1
         
-        print(f"{split_name} split distribution:")
+        print(f"\n{split_name} split distribution:")
         for class_name in class_names:
             count = class_counts[class_name]
             percentage = count / len(file_list) * 100 if file_list else 0
@@ -233,7 +234,7 @@ def visualize_samples(dataset):
     # Log artifact to MLflow
     mlflow.log_artifact(sample_img_path)
 
-# Build the model with EfficientNetB5
+# Build the model with EfficientNet
 def build_model():
     # Load the EfficientNetB5 model with pre-trained ImageNet weights
     base_model = keras.applications.EfficientNetB5(
@@ -278,20 +279,14 @@ class MLflowCallback(keras.callbacks.Callback):
 # Plot training history
 def plot_history(history, filename='training_history.png'):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
-    
-    # Check if history has data before plotting
-    if 'accuracy' in history.history:
-        ax1.plot(history.history['accuracy'], label='train accuracy')
-    if 'val_accuracy' in history.history:
-        ax1.plot(history.history['val_accuracy'], label='val accuracy')
+    ax1.plot(history.history['accuracy'], label='train accuracy')
+    ax1.plot(history.history['val_accuracy'], label='val accuracy')
     ax1.set_ylabel('Accuracy')
     ax1.set_xlabel('Epoch')
     ax1.legend()
     
-    if 'loss' in history.history:
-        ax2.plot(history.history['loss'], label='train loss')
-    if 'val_loss' in history.history:
-        ax2.plot(history.history['val_loss'], label='val loss')
+    ax2.plot(history.history['loss'], label='train loss')
+    ax2.plot(history.history['val_loss'], label='val loss')
     ax2.set_ylabel('Loss')
     ax2.set_xlabel('Epoch')
     ax2.legend()
@@ -343,37 +338,45 @@ def predict_image(model, image_path):
     pred_img_path = os.path.join(SCRIPT_DIR, f'prediction_{os.path.basename(image_path)}.png')
     plt.savefig(pred_img_path)
     print(f"Prediction visualization saved to '{pred_img_path}'")
+    
+    # Log prediction as artifact
+    mlflow.log_artifact(pred_img_path)
+    
+    # Log metrics for the prediction
+    prediction_metrics = {class_names[i]: float(predictions[0][i]) for i in range(len(class_names))}
+    
+    for class_name, prob in prediction_metrics.items():
+        # Use sanitized class name for metric name
+        safe_class_name = sanitize_mlflow_metric_name(class_name)
+        mlflow.log_metric(f"prediction_prob_{safe_class_name}", prob)
+    
+    mlflow.log_metric("prediction_confidence", confidence)
+    
+    return class_names[predicted_class], confidence, prediction_metrics
 
-# Save the trained model
-def save_model(model, filename="efficientnet_b5_456"):
+# Save the model
+def save_model(model, filename="efficientnet_b0_244"):
     # Save H5 model
     model_path = os.path.join(SCRIPT_DIR, f"{filename}.h5")
     model.save(model_path)
-    print(f"Model saved to '{model_path}'")
+    print(f"Model saved as {model_path}")
     
     # Save TensorFlow Lite model
     tflite_path = os.path.join(SCRIPT_DIR, f"{filename}.tflite")
     convert_model_to_tflite(model, tflite_path)
     
-    # Log the model to MLflow
-    mlflow.keras.log_model(model, "model")
+    # Log model to MLflow
+    mlflow.log_artifact(model_path)
 
+# Main execution
 def main():
     # Set up MLflow
     mlflow.set_experiment(EXPERIMENT_NAME)
     
-    with mlflow.start_run():
-        print("Loading and preparing data...")
-        train_ds, val_ds, test_ds = prepare_dataset()
+    start_time = datetime.now()
+    
+    with mlflow.start_run(run_name=f"EfficientNetB5_{start_time.strftime('%Y%m%d-%H%M%S')}"):
         
-        # Log dataset size
-        train_size = sum(1 for _ in train_ds)
-        val_size = sum(1 for _ in val_ds)
-        test_size = sum(1 for _ in test_ds)
-        mlflow.log_metric("train_batches", train_size)
-        mlflow.log_metric("val_batches", val_size)
-        mlflow.log_metric("test_batches", test_size)
-
         # Log parameters
         params = {
             "image_size": f"{IMAGE_SIZE[0]}x{IMAGE_SIZE[1]}",
@@ -385,117 +388,86 @@ def main():
             "dataset_path": DATASET_PATH,
             "model_architecture": "EfficientNetB5",
             "train_split": "70%",
-            "validation_split": "10%",
-            "test_split": "20%",
+            "validation_split": "15%",
+            "test_split": "15%",
             "balanced_splits": "True",
             "split_strategy": "per_class_balanced"
         }
         mlflow.log_params(params)
-
+        
+        # Prepare dataset
+        print("Preparing dataset...")
+        train_ds, val_ds, test_ds = prepare_dataset()
+        
+        # Log dataset size
+        train_size = sum(1 for _ in train_ds)
+        val_size = sum(1 for _ in val_ds)
+        test_size = sum(1 for _ in test_ds)
+        mlflow.log_metric("train_batches", train_size)
+        mlflow.log_metric("val_batches", val_size)
+        mlflow.log_metric("test_batches", test_size)
+        
+        # Display some sample images
         print("Visualizing sample images...")
         visualize_samples(train_ds)
         
+        # Build the model
         print("Building model...")
         model, base_model = build_model()
         
-        # Print model summary
-        print("\nModel Summary:")
+        # Summary of the model
         model.summary()
         
-        # Setup callbacks
-        early_stopping = keras.callbacks.EarlyStopping(
-            monitor='val_loss',
-            patience=5,
-            restore_best_weights=True
-        )
-        
-        reduce_lr = keras.callbacks.ReduceLROnPlateau(
-            monitor='val_loss',
-            factor=0.2,
-            patience=3,
-            min_lr=1e-7
-        )
-        
+        # Create MLflow callback for logging during training
         mlflow_callback = MLflowCallback()
         
-        callbacks = [early_stopping, reduce_lr, mlflow_callback]
+        # Train the model with frozen base
+        print("\nInitial training with frozen base model...")
+        mlflow.log_metric("training_phase", 1)  # Initial training phase
         
-        # Initial training with frozen base
-        print("\n=== Phase 1: Training with frozen base ===")
-        start_time = time.time()
-        history_initial = model.fit(
+        history = model.fit(
             train_ds,
             epochs=EPOCHS_INITIAL,
             validation_data=val_ds,
-            callbacks=callbacks
+            callbacks=[mlflow_callback]
         )
-        initial_training_time = time.time() - start_time
         
-        # Plot initial training history
-        plot_history(history_initial, 'initial_training_history.png')
+        # Plot training history
+        plot_history(history, 'initial_training_history.png')
         
         # Track best validation metrics from initial training
-        best_val_acc = max(history_initial.history['val_accuracy'])
-        best_val_loss = min(history_initial.history['val_loss'])
+        best_val_acc = max(history.history['val_accuracy'])
+        best_val_loss = min(history.history['val_loss'])
         mlflow.log_metric("initial_best_val_accuracy", best_val_acc)
         mlflow.log_metric("initial_best_val_loss", best_val_loss)
         
         # Unfreeze and fine-tune
-        print("\n=== Phase 2: Fine-tuning with unfrozen layers ===")
+        print("\nFine-tuning the model...")
         model = unfreeze_model(model, base_model)
         
         # Log new phase
         mlflow.log_metric("training_phase", 2)  # Fine-tuning phase
         
-        start_time = time.time()
-        history_fine_tune = model.fit(
+        # Fine-tune the model
+        fine_tune_history = model.fit(
             train_ds,
             epochs=EPOCHS_FINE_TUNING,
             validation_data=val_ds,
-            callbacks=callbacks,
-            initial_epoch=len(history_initial.history['loss'])
+            callbacks=[mlflow_callback]
         )
-        fine_tuning_time = time.time() - start_time
         
         # Plot fine-tuning history
-        plot_history(history_fine_tune, 'fine_tuning_history.png')
+        plot_history(fine_tune_history, 'fine_tuning_history.png')
         
         # Track best validation metrics from fine-tuning
-        if 'val_accuracy' in history_fine_tune.history and history_fine_tune.history['val_accuracy']:
-            best_val_acc_ft = max(history_fine_tune.history['val_accuracy'])
-            best_val_loss_ft = min(history_fine_tune.history['val_loss'])
-            mlflow.log_metric("fine_tuning_best_val_accuracy", best_val_acc_ft)
-            mlflow.log_metric("fine_tuning_best_val_loss", best_val_loss_ft)
-            
-            # Log improvement metrics
-            mlflow.log_metric("accuracy_improvement", best_val_acc_ft - best_val_acc)
-            mlflow.log_metric("loss_improvement", best_val_loss - best_val_loss_ft)
-        else:
-            # If no fine-tuning epochs were run, use initial values
-            best_val_acc_ft = best_val_acc
-            best_val_loss_ft = best_val_loss
-            mlflow.log_metric("fine_tuning_best_val_accuracy", best_val_acc_ft)
-            mlflow.log_metric("fine_tuning_best_val_loss", best_val_loss_ft)
-            mlflow.log_metric("accuracy_improvement", 0.0)
-            mlflow.log_metric("loss_improvement", 0.0)
+        best_val_acc_ft = max(fine_tune_history.history['val_accuracy'])
+        best_val_loss_ft = min(fine_tune_history.history['val_loss'])
+        mlflow.log_metric("fine_tuning_best_val_accuracy", best_val_acc_ft)
+        mlflow.log_metric("fine_tuning_best_val_loss", best_val_loss_ft)
         
-        # Combined training times
-        total_training_time = initial_training_time + fine_tuning_time
-        mlflow.log_metric("total_training_time_seconds", total_training_time)
-        mlflow.log_metric("initial_training_time_seconds", initial_training_time)
-        mlflow.log_metric("fine_tuning_time_seconds", fine_tuning_time)
-        
-        print(f"\nTotal training time: {total_training_time/60:.2f} minutes")
-        
-        # Final evaluation
-        print("\n=== Final Evaluation ===")
-        test_loss, test_accuracy = model.evaluate(test_ds, verbose=0)
-        print(f"Final Test Accuracy: {test_accuracy:.4f}")
-        print(f"Final Test Loss: {test_loss:.4f}")
-        
-        # Log final metrics
-        mlflow.log_metric("final_test_accuracy", test_accuracy)
-        mlflow.log_metric("final_test_loss", test_loss)
+        # Log improvement metrics
+        mlflow.log_metric("accuracy_improvement", best_val_acc_ft - best_val_acc)
+        mlflow.log_metric("loss_improvement", best_val_loss - best_val_loss_ft)
         
         # Evaluate model with confusion matrix and detailed metrics
         print("\n" + "="*60)
@@ -509,8 +481,14 @@ def main():
         print("="*60)
         cm_val, classification_report_dict_val, class_accuracies_val = evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names)
         
+        # Capture end time after fine tuning
+        end_time = datetime.now()
+        
+        # Count model parameters
+        model_params = model.count_params()
+        
         # Save the model
-        save_model(model)
+        save_model(model, "efficientnet_b5_456")
         
         # ============================================
         # SAVE TRAINING RESULTS TO JSON
@@ -520,7 +498,7 @@ def main():
         print("="*60)
         
         # Extract final metrics from training histories
-        train_acc, valid_acc, train_fine_tuning_acc, valid_finetuning_acc = extract_final_metrics(history_initial, history_fine_tune)
+        train_acc, valid_acc, train_fine_tuning_acc, valid_finetuning_acc = extract_final_metrics(history, fine_tune_history)
         
         # Extract dataset name from path
         dataset_name = os.path.basename(DATASET_PATH)
@@ -536,23 +514,100 @@ def main():
             valid_acc=valid_acc,
             train_fine_tuning_acc=train_fine_tuning_acc,
             valid_finetuning_acc=valid_finetuning_acc,
-            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results")
+            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results"),
+            model_params=model_params,
+            training_start_time=start_time,
+            training_end_time=end_time
         )
         
-        print("Training completed successfully!")
+        # Calculate total time
+        total_time = datetime.now() - start_time
+        hours, remainder = divmod(total_time.total_seconds(), 3600)
+        minutes, seconds = divmod(remainder, 60)
+        
+        training_time_str = f"{int(hours)}h {int(minutes)}m {int(seconds)}s"
+        print(f"Total training time: {training_time_str}")
+        
+        # Log training time
+        mlflow.log_metric("training_time_seconds", total_time.total_seconds())
+        mlflow.log_param("training_time", training_time_str)
+        
+        # Find a test image to predict
+        test_images = []
+        for class_name in class_names:
+            class_path = os.path.join(DATASET_PATH, class_name)
+            if os.path.isdir(class_path):
+                files = os.listdir(class_path)
+                if files:
+                    # Get the first image from each class
+                    test_images.append(os.path.join(class_path, files[0]))
+        
+        # Make predictions on test images
+        if test_images:
+            print("\nTesting model on sample images...")
+            prediction_results = {}
+            
+            for img_path in test_images[:3]:  # Test on up to 3 images
+                print(f"\nPredicting image: {img_path}")
+                class_name, confidence, class_probs = predict_image(model, img_path)
+                
+                # Store prediction results
+                img_basename = os.path.basename(img_path)
+                true_class = os.path.basename(os.path.dirname(img_path))
+                is_correct = class_name == true_class
+                
+                prediction_results[img_basename] = {
+                    "predicted_class": class_name,
+                    "true_class": true_class,
+                    "correct": is_correct,
+                    "confidence": float(confidence)  # Convert float32 to Python float
+                }
+                
+                # Log prediction correctness - sanitize filename for MLflow metric name
+                safe_img_name = sanitize_mlflow_metric_name(img_basename)
+                mlflow.log_metric(f"prediction_correct_{safe_img_name}", 1 if is_correct else 0)
+            
+            # Log prediction results as a JSON artifact
+            # Criar um codificador JSON personalizado para lidar com tipos NumPy/TensorFlow
+            class NumpyJSONEncoder(json.JSONEncoder):
+                def default(self, obj):
+                    if isinstance(obj, np.integer):
+                        return int(obj)
+                    if isinstance(obj, np.floating):
+                        return float(obj)
+                    if isinstance(obj, np.ndarray):
+                        return obj.tolist()
+                    return super().default(obj)
+            
+            results_path = os.path.join(SCRIPT_DIR, "prediction_results.json")
+            with open(results_path, "w") as f:
+                json.dump(prediction_results, f, indent=2, cls=NumpyJSONEncoder)
+            
+            mlflow.log_artifact(results_path)
+    
+    return model
 
+# Generate confusion matrix and classification report
 def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
     """
-    Evaluate the model and generate confusion matrix and classification report
+    Generate confusion matrix and detailed classification metrics
     """
-    # Get predictions
+    print("\nGenerating confusion matrix and classification report...")
+    
+    # Get predictions for the entire validation set
     y_true = []
     y_pred = []
     
     for images, labels in val_ds:
         predictions = model.predict(images, verbose=0)
+        predicted_classes = np.argmax(predictions, axis=1)
+        
         y_true.extend(labels.numpy())
-        y_pred.extend(np.argmax(predictions, axis=1))
+        y_pred.extend(predicted_classes)
+    
+    # Convert to numpy arrays
+    y_true = np.array(y_true)
+    y_pred = np.array(y_pred)
     
     # Generate confusion matrix
     cm = confusion_matrix(y_true, y_pred)
@@ -622,7 +677,7 @@ def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
     
     plt.xlabel('Classes', fontsize=12)
     plt.ylabel('Score', fontsize=12)
-    plt.title('Classification Metrics by Class (EfficientNet-B5)', fontsize=16, fontweight='bold')
+    plt.title('Classification Metrics by Class', fontsize=16, fontweight='bold')
     plt.xticks(x, class_names, rotation=45, ha='right')
     plt.legend()
     plt.ylim(0, 1.1)
@@ -833,7 +888,7 @@ def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
     plt.close()
     
     print("\n" + "="*60)
-
+    
     return cm, report, class_accuracies
 
 # Generate confusion matrix and classification report for validation set
@@ -893,5 +948,6 @@ def evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names):
     
     return cm, report, class_accuracies
 
+# Execute main function when script is run
 if __name__ == "__main__":
-    main() 
+    model = main() 

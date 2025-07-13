@@ -14,6 +14,7 @@ import pandas as pd
 import glob
 import random
 from collections import defaultdict
+from datetime import datetime
 
 # Import the model logger
 import sys
@@ -235,7 +236,7 @@ def visualize_samples(dataset):
 
 # Build the model with EfficientNet
 def build_model():
-    # Load the EfficientNetB0 model with pre-trained ImageNet weights
+    # Load the EfficientNetB1 model with pre-trained ImageNet weights
     base_model = keras.applications.EfficientNetB1(
         include_top=False,
         weights="imagenet",
@@ -372,8 +373,9 @@ def main():
     # Set up MLflow
     mlflow.set_experiment(EXPERIMENT_NAME)
     
-    with mlflow.start_run(run_name=f"EfficientNetB1_{time.strftime('%Y%m%d-%H%M%S')}"):
-        start_time = time.time()
+    start_time = datetime.now()
+    
+    with mlflow.start_run(run_name=f"EfficientNetB1_{start_time.strftime('%Y%m%d-%H%M%S')}"):
         
         # Log parameters
         params = {
@@ -479,6 +481,12 @@ def main():
         print("="*60)
         cm_val, classification_report_dict_val, class_accuracies_val = evaluate_model_with_confusion_matrix_validation(model, val_ds, class_names)
         
+        # Capture end time after fine tuning
+        end_time = datetime.now()
+        
+        # Count model parameters
+        model_params = model.count_params()
+        
         # Save the model
         save_model(model, "efficientnet_b1_240")
         
@@ -506,19 +514,22 @@ def main():
             valid_acc=valid_acc,
             train_fine_tuning_acc=train_fine_tuning_acc,
             valid_finetuning_acc=valid_finetuning_acc,
-            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results")
+            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results"),
+            model_params=model_params,
+            training_start_time=start_time,
+            training_end_time=end_time
         )
         
         # Calculate total time
-        total_time = time.time() - start_time
-        hours, remainder = divmod(total_time, 3600)
+        total_time = datetime.now() - start_time
+        hours, remainder = divmod(total_time.total_seconds(), 3600)
         minutes, seconds = divmod(remainder, 60)
         
         training_time_str = f"{int(hours)}h {int(minutes)}m {int(seconds)}s"
         print(f"Total training time: {training_time_str}")
         
         # Log training time
-        mlflow.log_metric("training_time_seconds", total_time)
+        mlflow.log_metric("training_time_seconds", total_time.total_seconds())
         mlflow.log_param("training_time", training_time_str)
         
         # Find a test image to predict
