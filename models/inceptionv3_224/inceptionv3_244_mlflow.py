@@ -11,9 +11,14 @@ import json
 from sklearn.metrics import confusion_matrix, classification_report
 import seaborn as sns
 import pandas as pd
-from collections import defaultdict
-import random
 import glob
+import random
+from collections import defaultdict
+
+# Import the model logger
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from model_logger import save_training_results, extract_final_metrics, convert_model_to_tflite
 
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,7 +39,7 @@ IMAGE_SIZE = (299, 299)  # InceptionV3 default input size
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_balanceado_2")
+DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_v4_balanceado")
 EXPERIMENT_NAME = "InceptionV3-SkinCondition"
 
 # Get class names from directory structure
@@ -353,9 +358,14 @@ def predict_image(model, image_path):
 
 # Save the model
 def save_model(model, filename="inceptionv3_244"):
+    # Save H5 model
     model_path = os.path.join(SCRIPT_DIR, f"{filename}.h5")
     model.save(model_path)
     print(f"Model saved as {model_path}")
+    
+    # Save TensorFlow Lite model
+    tflite_path = os.path.join(SCRIPT_DIR, f"{filename}.tflite")
+    convert_model_to_tflite(model, tflite_path)
     
     # Log model to MLflow
     mlflow.log_artifact(model_path)
@@ -835,6 +845,33 @@ def main():
         
         # Save the model
         save_model(model, "inceptionv3_244")
+        
+        # ============================================
+        # SAVE TRAINING RESULTS TO JSON
+        # ============================================
+        print("\n" + "="*60)
+        print("SAVING TRAINING RESULTS TO JSON")
+        print("="*60)
+        
+        # Extract final metrics from training histories
+        train_acc, valid_acc, train_fine_tuning_acc, valid_finetuning_acc = extract_final_metrics(history, fine_tune_history)
+        
+        # Extract dataset name from path
+        dataset_name = os.path.basename(DATASET_PATH)
+        
+        # Save training results to JSON
+        save_training_results(
+            dataset_name=dataset_name,
+            model_name="InceptionV3",
+            batch_size=BATCH_SIZE,
+            epochs=EPOCHS_INITIAL,
+            fine_tuning_epochs=EPOCHS_FINE_TUNING,
+            train_acc=train_acc,
+            valid_acc=valid_acc,
+            train_fine_tuning_acc=train_fine_tuning_acc,
+            valid_finetuning_acc=valid_finetuning_acc,
+            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results")
+        )
         
         # Calculate total time
         total_time = time.time() - start_time

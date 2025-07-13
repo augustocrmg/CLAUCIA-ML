@@ -15,6 +15,11 @@ import glob
 import random
 from collections import defaultdict
 
+# Import the model logger
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from model_logger import save_training_results, extract_final_metrics, convert_model_to_tflite
+
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -34,7 +39,7 @@ IMAGE_SIZE = (456, 456)  # EfficientNetB5 optimized input size
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_balanceado_2")
+DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_v4_balanceado")
 EXPERIMENT_NAME = "EfficientNetB5-SkinCondition"
 
 # Get class names from directory structure
@@ -341,9 +346,14 @@ def predict_image(model, image_path):
 
 # Save the trained model
 def save_model(model, filename="efficientnet_b5_456"):
+    # Save H5 model
     model_path = os.path.join(SCRIPT_DIR, f"{filename}.h5")
     model.save(model_path)
     print(f"Model saved to '{model_path}'")
+    
+    # Save TensorFlow Lite model
+    tflite_path = os.path.join(SCRIPT_DIR, f"{filename}.tflite")
+    convert_model_to_tflite(model, tflite_path)
     
     # Log the model to MLflow
     mlflow.keras.log_model(model, "model")
@@ -424,9 +434,18 @@ def main():
         # Plot initial training history
         plot_history(history_initial, 'initial_training_history.png')
         
+        # Track best validation metrics from initial training
+        best_val_acc = max(history_initial.history['val_accuracy'])
+        best_val_loss = min(history_initial.history['val_loss'])
+        mlflow.log_metric("initial_best_val_accuracy", best_val_acc)
+        mlflow.log_metric("initial_best_val_loss", best_val_loss)
+        
         # Unfreeze and fine-tune
         print("\n=== Phase 2: Fine-tuning with unfrozen layers ===")
         model = unfreeze_model(model, base_model)
+        
+        # Log new phase
+        mlflow.log_metric("training_phase", 2)  # Fine-tuning phase
         
         start_time = time.time()
         history_fine_tune = model.fit(
@@ -440,6 +459,25 @@ def main():
         
         # Plot fine-tuning history
         plot_history(history_fine_tune, 'fine_tuning_history.png')
+        
+        # Track best validation metrics from fine-tuning
+        if 'val_accuracy' in history_fine_tune.history and history_fine_tune.history['val_accuracy']:
+            best_val_acc_ft = max(history_fine_tune.history['val_accuracy'])
+            best_val_loss_ft = min(history_fine_tune.history['val_loss'])
+            mlflow.log_metric("fine_tuning_best_val_accuracy", best_val_acc_ft)
+            mlflow.log_metric("fine_tuning_best_val_loss", best_val_loss_ft)
+            
+            # Log improvement metrics
+            mlflow.log_metric("accuracy_improvement", best_val_acc_ft - best_val_acc)
+            mlflow.log_metric("loss_improvement", best_val_loss - best_val_loss_ft)
+        else:
+            # If no fine-tuning epochs were run, use initial values
+            best_val_acc_ft = best_val_acc
+            best_val_loss_ft = best_val_loss
+            mlflow.log_metric("fine_tuning_best_val_accuracy", best_val_acc_ft)
+            mlflow.log_metric("fine_tuning_best_val_loss", best_val_loss_ft)
+            mlflow.log_metric("accuracy_improvement", 0.0)
+            mlflow.log_metric("loss_improvement", 0.0)
         
         # Combined training times
         total_training_time = initial_training_time + fine_tuning_time
@@ -474,6 +512,33 @@ def main():
         # Save the model
         save_model(model)
         
+        # ============================================
+        # SAVE TRAINING RESULTS TO JSON
+        # ============================================
+        print("\n" + "="*60)
+        print("SAVING TRAINING RESULTS TO JSON")
+        print("="*60)
+        
+        # Extract final metrics from training histories
+        train_acc, valid_acc, train_fine_tuning_acc, valid_finetuning_acc = extract_final_metrics(history_initial, history_fine_tune)
+        
+        # Extract dataset name from path
+        dataset_name = os.path.basename(DATASET_PATH)
+        
+        # Save training results to JSON
+        save_training_results(
+            dataset_name=dataset_name,
+            model_name="EfficientNet-B5",
+            batch_size=BATCH_SIZE,
+            epochs=EPOCHS_INITIAL,
+            fine_tuning_epochs=EPOCHS_FINE_TUNING,
+            train_acc=train_acc,
+            valid_acc=valid_acc,
+            train_fine_tuning_acc=train_fine_tuning_acc,
+            valid_finetuning_acc=valid_finetuning_acc,
+            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results")
+        )
+        
         print("Training completed successfully!")
 
 def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
@@ -489,70 +554,285 @@ def evaluate_model_with_confusion_matrix(model, val_ds, class_names):
         y_true.extend(labels.numpy())
         y_pred.extend(np.argmax(predictions, axis=1))
     
-    # Confusion matrix
+    # Generate confusion matrix
     cm = confusion_matrix(y_true, y_pred)
     
-    # Plot confusion matrix
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
-                xticklabels=class_names, yticklabels=class_names)
-    plt.title('Confusion Matrix - EfficientNetB5')
-    plt.ylabel('True Label')
-    plt.xlabel('Predicted Label')
+    # Calculate accuracy per class
+    class_accuracies = cm.diagonal() / cm.sum(axis=1)
     
-    cm_path = os.path.join(SCRIPT_DIR, 'confusion_matrix.png')
-    plt.savefig(cm_path, dpi=300, bbox_inches='tight')
-    print(f"Confusion matrix saved to '{cm_path}'")
-    
-    # Log confusion matrix as artifact
-    mlflow.log_artifact(cm_path)
-    
-    # Classification report
+    # Generate classification report
     report = classification_report(y_true, y_pred, target_names=class_names, output_dict=True)
     
-    # Pretty print the report
-    print("\nClassification Report:")
-    print(classification_report(y_true, y_pred, target_names=class_names))
+    # Create confusion matrix visualization
+    plt.figure(figsize=(12, 10))
     
-    # Log individual class metrics to MLflow
-    for class_name, metrics in report.items():
-        if isinstance(metrics, dict):
-            sanitized_class_name = sanitize_mlflow_metric_name(class_name)
-            for metric_name, value in metrics.items():
-                if metric_name in ['precision', 'recall', 'f1-score', 'support']:
-                    mlflow.log_metric(f"{sanitized_class_name}_{metric_name}", value)
+    # Create DataFrame for better visualization
+    cm_df = pd.DataFrame(cm, index=class_names, columns=class_names)
     
-    # Log overall metrics
-    if 'accuracy' in report:
-        mlflow.log_metric("overall_accuracy", report['accuracy'])
-    if 'macro avg' in report:
-        mlflow.log_metric("macro_avg_f1_score", report['macro avg']['f1-score'])
-        mlflow.log_metric("macro_avg_precision", report['macro avg']['precision'])
-        mlflow.log_metric("macro_avg_recall", report['macro avg']['recall'])
-    if 'weighted avg' in report:
-        mlflow.log_metric("weighted_avg_f1_score", report['weighted avg']['f1-score'])
-        mlflow.log_metric("weighted_avg_precision", report['weighted avg']['precision'])
-        mlflow.log_metric("weighted_avg_recall", report['weighted avg']['recall'])
+    # Plot confusion matrix with percentages
+    sns.heatmap(cm_df, annot=True, fmt='d', cmap='Blues', 
+                square=True, linewidths=0.5, cbar_kws={"shrink": .8})
+    plt.title('Confusion Matrix - Absolute Values (EfficientNet-B5)', fontsize=16, fontweight='bold')
+    plt.ylabel('True Label', fontsize=12)
+    plt.xlabel('Predicted Label', fontsize=12)
+    plt.xticks(rotation=45, ha='right')
+    plt.yticks(rotation=0)
+    plt.tight_layout()
     
-    # Save classification report as JSON
-    report_path = os.path.join(SCRIPT_DIR, 'classification_report.json')
+    cm_path = os.path.join(SCRIPT_DIR, 'confusion_matrix_efficientnet_b5.png')
+    plt.savefig(cm_path, dpi=300, bbox_inches='tight')
+    print(f"Confusion matrix saved to '{cm_path}'")
+    mlflow.log_artifact(cm_path)
+    plt.close()
     
-    # Custom JSON encoder to handle numpy types
-    class NumpyJSONEncoder(json.JSONEncoder):
-        def default(self, obj):
-            if isinstance(obj, np.integer):
-                return int(obj)
-            elif isinstance(obj, np.floating):
-                return float(obj)
-            elif isinstance(obj, np.ndarray):
-                return obj.tolist()
-            return super().default(obj)
+    # Create normalized confusion matrix (percentages)
+    plt.figure(figsize=(12, 10))
+    cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+    cm_norm_df = pd.DataFrame(cm_normalized, index=class_names, columns=class_names)
+    
+    sns.heatmap(cm_norm_df, annot=True, fmt='.2%', cmap='Blues', 
+                square=True, linewidths=0.5, cbar_kws={"shrink": .8})
+    plt.title('Confusion Matrix - Normalized (EfficientNet-B5)', fontsize=16, fontweight='bold')
+    plt.ylabel('True Label', fontsize=12)
+    plt.xlabel('Predicted Label', fontsize=12)
+    plt.xticks(rotation=45, ha='right')
+    plt.yticks(rotation=0)
+    plt.tight_layout()
+    
+    cm_norm_path = os.path.join(SCRIPT_DIR, 'confusion_matrix_normalized_efficientnet_b5.png')
+    plt.savefig(cm_norm_path, dpi=300, bbox_inches='tight')
+    print(f"Normalized confusion matrix saved to '{cm_norm_path}'")
+    mlflow.log_artifact(cm_norm_path)
+    plt.close()
+    
+    # Create detailed metrics visualization
+    plt.figure(figsize=(14, 8))
+    
+    # Extract metrics from classification report
+    precision_values = [report[class_name]['precision'] for class_name in class_names]
+    recall_values = [report[class_name]['recall'] for class_name in class_names]
+    f1_values = [report[class_name]['f1-score'] for class_name in class_names]
+    
+    x = np.arange(len(class_names))
+    width = 0.25
+    
+    plt.bar(x - width, precision_values, width, label='Precision', alpha=0.8)
+    plt.bar(x, recall_values, width, label='Recall', alpha=0.8)
+    plt.bar(x + width, f1_values, width, label='F1-Score', alpha=0.8)
+    
+    plt.xlabel('Classes', fontsize=12)
+    plt.ylabel('Score', fontsize=12)
+    plt.title('Classification Metrics by Class (EfficientNet-B5)', fontsize=16, fontweight='bold')
+    plt.xticks(x, class_names, rotation=45, ha='right')
+    plt.legend()
+    plt.ylim(0, 1.1)
+    plt.grid(axis='y', alpha=0.3)
+    plt.tight_layout()
+    
+    metrics_path = os.path.join(SCRIPT_DIR, 'classification_metrics_by_class_efficientnet_b5.png')
+    plt.savefig(metrics_path, dpi=300, bbox_inches='tight')
+    print(f"Classification metrics plot saved to '{metrics_path}'")
+    mlflow.log_artifact(metrics_path)
+    plt.close()
+    
+    # Log detailed metrics to MLflow
+    overall_accuracy = np.sum(y_true == y_pred) / len(y_true)
+    mlflow.log_metric("confusion_matrix_accuracy", overall_accuracy)
+    mlflow.log_metric("macro_avg_precision", report['macro avg']['precision'])
+    mlflow.log_metric("macro_avg_recall", report['macro avg']['recall'])
+    mlflow.log_metric("macro_avg_f1", report['macro avg']['f1-score'])
+    mlflow.log_metric("weighted_avg_precision", report['weighted avg']['precision'])
+    mlflow.log_metric("weighted_avg_recall", report['weighted avg']['recall'])
+    mlflow.log_metric("weighted_avg_f1", report['weighted avg']['f1-score'])
+    
+    # Log per-class metrics
+    for i, class_name in enumerate(class_names):
+        safe_class_name = sanitize_mlflow_metric_name(class_name)
+        mlflow.log_metric(f"precision_{safe_class_name}", report[class_name]['precision'])
+        mlflow.log_metric(f"recall_{safe_class_name}", report[class_name]['recall'])
+        mlflow.log_metric(f"f1_score_{safe_class_name}", report[class_name]['f1-score'])
+        mlflow.log_metric(f"support_{safe_class_name}", report[class_name]['support'])
+        mlflow.log_metric(f"accuracy_{safe_class_name}", class_accuracies[i])
+    
+    # Save detailed report as JSON
+    report_path = os.path.join(SCRIPT_DIR, "classification_report_efficientnet_b5.json")
+    
+    # Create a comprehensive report
+    detailed_report = {
+        "model_name": "EfficientNet-B5",
+        "classification_report": report,
+        "class_accuracies": {class_names[i]: float(class_accuracies[i]) for i in range(len(class_names))},
+        "confusion_matrix": cm.tolist(),
+        "normalized_confusion_matrix": cm_normalized.tolist()
+    }
     
     with open(report_path, 'w') as f:
-        json.dump(report, f, indent=2, cls=NumpyJSONEncoder)
-    
-    print(f"Classification report saved to '{report_path}'")
+        json.dump(detailed_report, f, indent=2)
     mlflow.log_artifact(report_path)
+    
+    # Print detailed analysis
+    print("\n" + "="*60)
+    print("CONFUSION MATRIX ANALYSIS")
+    print("="*60)
+    
+    print(f"\nOverall Accuracy: {overall_accuracy:.4f}")
+    print(f"Macro Average F1-Score: {report['macro avg']['f1-score']:.4f}")
+    print(f"Weighted Average F1-Score: {report['weighted avg']['f1-score']:.4f}")
+    
+    print("\nPer-Class Performance:")
+    print("-" * 40)
+    for i, class_name in enumerate(class_names):
+        precision = report[class_name]['precision']
+        recall = report[class_name]['recall']
+        f1 = report[class_name]['f1-score']
+        support = report[class_name]['support']
+        accuracy = class_accuracies[i]
+        
+        print(f"{class_name:20} | Acc: {accuracy:.3f} | Prec: {precision:.3f} | Rec: {recall:.3f} | F1: {f1:.3f} | Support: {support}")
+    
+    # Identify most confused classes
+    print("\nMost Confused Class Pairs:")
+    print("-" * 40)
+    confusion_pairs = []
+    for i in range(len(class_names)):
+        for j in range(len(class_names)):
+            if i != j and cm[i, j] > 0:
+                confusion_pairs.append((class_names[i], class_names[j], cm[i, j], cm[i, j] / cm[i].sum()))
+    
+    # Sort by absolute number of confusions
+    confusion_pairs.sort(key=lambda x: x[2], reverse=True)
+    
+    for true_class, pred_class, count, percentage in confusion_pairs[:10]:  # Top 10 confusions
+        print(f"{true_class:20} -> {pred_class:20} | Count: {count:3d} | {percentage:.1%}")
+    
+    # Create visualization for most confused class pairs
+    if confusion_pairs:
+        plt.figure(figsize=(14, 10))
+        
+        # Get top 15 confusions for better visualization
+        top_confusions = confusion_pairs[:15]
+        
+        if top_confusions:
+            confusion_labels = [f"{true_class} → {pred_class}" for true_class, pred_class, count, percentage in top_confusions]
+            confusion_counts = [count for true_class, pred_class, count, percentage in top_confusions]
+            confusion_percentages = [percentage * 100 for true_class, pred_class, count, percentage in top_confusions]
+            
+            # Create horizontal bar plot
+            y_pos = np.arange(len(confusion_labels))
+            bars = plt.barh(y_pos, confusion_counts, alpha=0.7)
+            
+            # Color bars based on confusion severity
+            colors = plt.cm.Reds(np.linspace(0.3, 0.9, len(confusion_counts)))
+            for bar, color in zip(bars, colors):
+                bar.set_color(color)
+            
+            # Add percentage labels on bars
+            for i, (count, percentage) in enumerate(zip(confusion_counts, confusion_percentages)):
+                plt.text(count + max(confusion_counts) * 0.01, i, f'{count} ({percentage:.1f}%)', 
+                        va='center', fontsize=10, fontweight='bold')
+            
+            plt.yticks(y_pos, confusion_labels, fontsize=10)
+            plt.xlabel('Number of Confusions', fontsize=12, fontweight='bold')
+            plt.title('Top Class Confusions (True Class → Predicted Class)', fontsize=16, fontweight='bold')
+            plt.grid(axis='x', alpha=0.3)
+            
+            # Invert y-axis to show highest confusions at top
+            plt.gca().invert_yaxis()
+            plt.tight_layout()
+            
+            confusion_plot_path = os.path.join(SCRIPT_DIR, 'class_confusions_plot_efficientnet_b5.png')
+            plt.savefig(confusion_plot_path, dpi=300, bbox_inches='tight')
+            print(f"Class confusions plot saved to '{confusion_plot_path}'")
+            mlflow.log_artifact(confusion_plot_path)
+            plt.close()
+    
+    # Create a comprehensive error analysis plot
+    plt.figure(figsize=(16, 12))
+    
+    # Subplot 1: Per-class accuracy
+    plt.subplot(2, 2, 1)
+    class_acc_sorted = sorted(zip(class_names, class_accuracies), key=lambda x: x[1])
+    sorted_classes, sorted_accuracies = zip(*class_acc_sorted)
+    
+    colors_acc = ['red' if acc < 0.7 else 'orange' if acc < 0.85 else 'green' for acc in sorted_accuracies]
+    bars = plt.barh(range(len(sorted_classes)), sorted_accuracies, color=colors_acc, alpha=0.7)
+    
+    plt.yticks(range(len(sorted_classes)), sorted_classes, fontsize=10)
+    plt.xlabel('Accuracy', fontsize=12)
+    plt.title('Per-Class Accuracy (Sorted)', fontsize=14, fontweight='bold')
+    plt.xlim(0, 1)
+    plt.grid(axis='x', alpha=0.3)
+    
+    # Add accuracy labels
+    for i, acc in enumerate(sorted_accuracies):
+        plt.text(acc + 0.02, i, f'{acc:.3f}', va='center', fontsize=9, fontweight='bold')
+    
+    # Subplot 2: Support (number of samples) per class
+    plt.subplot(2, 2, 2)
+    support_values = [report[class_name]['support'] for class_name in class_names]
+    class_support_sorted = sorted(zip(class_names, support_values), key=lambda x: x[1])
+    sorted_classes_sup, sorted_support = zip(*class_support_sorted)
+    
+    plt.barh(range(len(sorted_classes_sup)), sorted_support, color='skyblue', alpha=0.7)
+    plt.yticks(range(len(sorted_classes_sup)), sorted_classes_sup, fontsize=10)
+    plt.xlabel('Number of Samples', fontsize=12)
+    plt.title('Support per Class (Sorted)', fontsize=14, fontweight='bold')
+    plt.grid(axis='x', alpha=0.3)
+    
+    # Add support labels
+    for i, sup in enumerate(sorted_support):
+        plt.text(sup + max(sorted_support) * 0.02, i, str(sup), va='center', fontsize=9, fontweight='bold')
+    
+    # Subplot 3: F1-Score vs Support scatter plot
+    plt.subplot(2, 2, 3)
+    f1_scores = [report[class_name]['f1-score'] for class_name in class_names]
+    
+    scatter = plt.scatter(support_values, f1_scores, c=class_accuracies, cmap='RdYlGn', 
+                         s=100, alpha=0.7, edgecolors='black', linewidth=0.5)
+    plt.colorbar(scatter, label='Accuracy')
+    plt.xlabel('Support (Number of Samples)', fontsize=12)
+    plt.ylabel('F1-Score', fontsize=12)
+    plt.title('F1-Score vs Support (colored by Accuracy)', fontsize=14, fontweight='bold')
+    plt.grid(True, alpha=0.3)
+    
+    # Add class labels to points
+    for i, class_name in enumerate(class_names):
+        plt.annotate(class_name, (support_values[i], f1_scores[i]), 
+                    xytext=(5, 5), textcoords='offset points', fontsize=8)
+    
+    # Subplot 4: Precision vs Recall scatter plot
+    plt.subplot(2, 2, 4)
+    precision_values = [report[class_name]['precision'] for class_name in class_names]
+    recall_values = [report[class_name]['recall'] for class_name in class_names]
+    
+    scatter2 = plt.scatter(recall_values, precision_values, c=f1_scores, cmap='viridis', 
+                          s=100, alpha=0.7, edgecolors='black', linewidth=0.5)
+    plt.colorbar(scatter2, label='F1-Score')
+    plt.xlabel('Recall', fontsize=12)
+    plt.ylabel('Precision', fontsize=12)
+    plt.title('Precision vs Recall (colored by F1-Score)', fontsize=14, fontweight='bold')
+    plt.grid(True, alpha=0.3)
+    plt.xlim(0, 1.05)
+    plt.ylim(0, 1.05)
+    
+    # Add diagonal line (perfect precision-recall balance)
+    plt.plot([0, 1], [0, 1], 'r--', alpha=0.5, label='Perfect Balance')
+    plt.legend()
+    
+    # Add class labels to points
+    for i, class_name in enumerate(class_names):
+        plt.annotate(class_name, (recall_values[i], precision_values[i]), 
+                    xytext=(5, 5), textcoords='offset points', fontsize=8)
+    
+    plt.tight_layout()
+    
+    comprehensive_plot_path = os.path.join(SCRIPT_DIR, 'comprehensive_error_analysis_efficientnet_b5.png')
+    plt.savefig(comprehensive_plot_path, dpi=300, bbox_inches='tight')
+    print(f"Comprehensive error analysis plot saved to '{comprehensive_plot_path}'")
+    mlflow.log_artifact(comprehensive_plot_path)
+    plt.close()
+    
+    print("\n" + "="*60)
 
     return cm, report, class_accuracies
 

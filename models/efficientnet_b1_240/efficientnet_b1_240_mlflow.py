@@ -15,6 +15,11 @@ import glob
 import random
 from collections import defaultdict
 
+# Import the model logger
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from model_logger import save_training_results, extract_final_metrics, convert_model_to_tflite
+
 # Get the directory where this script is located
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -30,11 +35,11 @@ if gpus:
         print(e)
 
 # Configuration
-IMAGE_SIZE = (240, 240)  # EfficientNetB1 optimized input size
+IMAGE_SIZE = (240, 240)
 BATCH_SIZE = 32
 EPOCHS_INITIAL = 20
 EPOCHS_FINE_TUNING = 10
-DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_balanceado_2")
+DATASET_PATH = os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "datasets", "dataset_wagner_v4_balanceado")
 EXPERIMENT_NAME = "EfficientNetB1-SkinCondition"
 
 # Get class names from directory structure
@@ -56,7 +61,7 @@ def sanitize_mlflow_metric_name(name):
 # Data loading and preparation
 def prepare_dataset():
     """
-    Prepare dataset with balanced split: 70% train, 10% validation, 20% test
+    Prepare dataset with balanced split: 70% train, 15% validation, 15% test
     Ensures each class has the same proportion in each split
     
     This function implements a more controlled approach than tensorflow's 
@@ -65,16 +70,16 @@ def prepare_dataset():
     1. Analyzes the dataset structure and counts images per class
     2. Creates balanced splits by dividing each class individually:
        - 70% of each class goes to training
-       - 10% of each class goes to validation  
-       - 20% of each class goes to test
+       - 15% of each class goes to validation  
+       - 15% of each class goes to test
     3. Shuffles files within each class before splitting (reproducible with seed=42)
     4. Creates TensorFlow datasets with proper batching and prefetching
     5. Provides detailed statistics about the final split distribution
     
     Returns:
         train_ds: Training dataset (70% of total data)
-        val_ds: Validation dataset (10% of total data) 
-        test_ds: Test dataset (20% of total data)
+        val_ds: Validation dataset (15% of total data) 
+        test_ds: Test dataset (15% of total data)
     """
     # First, analyze the dataset structure
     print("Analyzing dataset structure...")
@@ -228,9 +233,9 @@ def visualize_samples(dataset):
     # Log artifact to MLflow
     mlflow.log_artifact(sample_img_path)
 
-# Build the model with EfficientNetB1
+# Build the model with EfficientNet
 def build_model():
-    # Load the EfficientNetB1 model with pre-trained ImageNet weights
+    # Load the EfficientNetB0 model with pre-trained ImageNet weights
     base_model = keras.applications.EfficientNetB1(
         include_top=False,
         weights="imagenet",
@@ -350,9 +355,14 @@ def predict_image(model, image_path):
 
 # Save the model
 def save_model(model, filename="efficientnet_b1_240"):
+    # Save H5 model
     model_path = os.path.join(SCRIPT_DIR, f"{filename}.h5")
     model.save(model_path)
     print(f"Model saved as {model_path}")
+    
+    # Save TensorFlow Lite model
+    tflite_path = os.path.join(SCRIPT_DIR, f"{filename}.tflite")
+    convert_model_to_tflite(model, tflite_path)
     
     # Log model to MLflow
     mlflow.log_artifact(model_path)
@@ -376,8 +386,8 @@ def main():
             "dataset_path": DATASET_PATH,
             "model_architecture": "EfficientNetB1",
             "train_split": "70%",
-            "validation_split": "10%",
-            "test_split": "20%",
+            "validation_split": "15%",
+            "test_split": "15%",
             "balanced_splits": "True",
             "split_strategy": "per_class_balanced"
         }
@@ -471,6 +481,33 @@ def main():
         
         # Save the model
         save_model(model, "efficientnet_b1_240")
+        
+        # ============================================
+        # SAVE TRAINING RESULTS TO JSON
+        # ============================================
+        print("\n" + "="*60)
+        print("SAVING TRAINING RESULTS TO JSON")
+        print("="*60)
+        
+        # Extract final metrics from training histories
+        train_acc, valid_acc, train_fine_tuning_acc, valid_finetuning_acc = extract_final_metrics(history, fine_tune_history)
+        
+        # Extract dataset name from path
+        dataset_name = os.path.basename(DATASET_PATH)
+        
+        # Save training results to JSON
+        save_training_results(
+            dataset_name=dataset_name,
+            model_name="EfficientNet-B1",
+            batch_size=BATCH_SIZE,
+            epochs=EPOCHS_INITIAL,
+            fine_tuning_epochs=EPOCHS_FINE_TUNING,
+            train_acc=train_acc,
+            valid_acc=valid_acc,
+            train_fine_tuning_acc=train_fine_tuning_acc,
+            valid_finetuning_acc=valid_finetuning_acc,
+            output_dir=os.path.join(os.path.dirname(os.path.dirname(SCRIPT_DIR)), "models_results")
+        )
         
         # Calculate total time
         total_time = time.time() - start_time
