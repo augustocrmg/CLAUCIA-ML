@@ -8,10 +8,10 @@ Classificação de imagens de pé diabético em uma classe Normal e nos graus 0 
 
 | Repositório | Função |
 |---|---|
-| [CLAUCIA-app](https://github.com/Eduardo-RFarias/CLAUCIA-app) | **Aplicativo móvel** Android (Flutter): cadastro de pacientes e feridas, captura de imagens e classificação no próprio aparelho |
-| [CLAUCIA-api](https://github.com/Eduardo-RFarias/CLAUCIA-api) | API REST do sistema (NestJS, TypeORM, MySQL, autenticação JWT) |
-| [CLAUCIA-web](https://github.com/Eduardo-RFarias/CLAUCIA-web) | Aplicação web |
-| [CLAUCIA-infra](https://github.com/Eduardo-RFarias/CLAUCIA-infra) | Infraestrutura e implantação |
+| [CLAUCIA-app](https://github.com/Eduardo-RFarias/CLAUCIA-app) | **Aplicativo móvel** (Flutter/Dart): gestão de pacientes, registro e acompanhamento de feridas e amostras, com classificação por IA no próprio aparelho (TensorFlow Lite/LiteRT) |
+| [CLAUCIA-api](https://github.com/Eduardo-RFarias/CLAUCIA-api) | API REST (NestJS, TypeScript, TypeORM, MySQL) para pacientes, feridas, amostras, profissionais e instituições, com autenticação JWT e documentação Swagger |
+| [CLAUCIA-web](https://github.com/Eduardo-RFarias/CLAUCIA-web) | Aplicação web (Angular 20, Angular Material) para instituições de saúde gerenciarem seus profissionais de enfermagem, com autenticação JWT |
+| [CLAUCIA-infra](https://github.com/Eduardo-RFarias/CLAUCIA-infra) | Implantação em produção com Docker Compose: MySQL, API, aplicação web, proxy reverso Nginx e certificados SSL (Let's Encrypt/Certbot) |
 | **CLAUCIA-ML** (este) | Modelos, avaliação, exportação e benchmarks |
 
 ## Principais resultados
