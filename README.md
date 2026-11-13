@@ -86,3 +86,7 @@ A. Camargo, E. R. de Farias, A. Bezerra, A. Müller, M. Carneiro e V. Rispoli, "
 ## Agradecimentos
 
 Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), bolsa de Desenvolvimento Tecnológico e Extensão Inovadora (processo 380610/2026-4).
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
