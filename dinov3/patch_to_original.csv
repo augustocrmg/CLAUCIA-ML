@@ -1,0 +1,587 @@
+file,label,original,inliers,second,box
+external_e1/Normal/v4_patch_2066.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2100.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2751.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2752.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2767.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2781.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_2833.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2882.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2934.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2938.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_2959.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_3022.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_3043.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_3140.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_3181.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_3185.jpeg,Normal,,0,0,
+external_e1/Normal/v4_patch_24425.jpg,Normal,,11,0,
+external_e1/Normal/v4_patch_24427.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_24480.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_24535.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_24564.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51854155_2050144488395616_7843512749614170112_n.jpg,25,0,"300,267,631,586"
+external_e1/Normal/v4_patch_24569.jpg,Normal,,10,0,
+external_e1/Normal/v4_patch_24619.jpg,Normal,,8,0,
+external_e1/Normal/v4_patch_24644.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_24680.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_24764.jpg,Normal,,9,0,
+external_e1/Normal/v4_patch_26906.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_26981.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27003.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51682765_394214241345105_6740431475734216704_n.jpg,40,0,"214,249,432,457"
+external_e1/Normal/v4_patch_27104.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27125.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27134.jpg,Normal,,8,0,
+external_e1/Normal/v4_patch_27191.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27224.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52269886_348112629367663_4188016850778456064_n.jpg,14,0,"315,187,531,396"
+external_e1/Normal/v4_patch_27237.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27266.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27334.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40114337_2155498331385904_4730891749101142016_n.jpg,18,0,"153,443,439,711"
+external_e1/Normal/v4_patch_27370.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27398.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,19,0,"825,335,1052,552"
+external_e1/Normal/v4_patch_27404.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27409.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27428.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27445.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27479.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27662.jpg,Normal,,4,0,
+external_e1/Normal/v4_patch_27734.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27737.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27902.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_27909.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51682765_394214241345105_6740431475734216704_n.jpg,18,0,"64,368,313,620"
+external_e1/Normal/v4_patch_27978.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_28035.jpg,Normal,,4,0,
+external_e1/Normal/v4_patch_28053.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51854155_2050144488395616_7843512749614170112_n.jpg,43,0,"233,255,516,535"
+external_e1/Normal/v4_patch_28057.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_28061.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_28657.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51838815_301450487231195_875085228484329472_n.jpg,14,0,"45,984,377,1312"
+external_e1/Normal/v4_patch_28695.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_28746.jpg,Normal,,5,0,
+external_e1/Normal/v4_patch_28799.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_28899.jpg,Normal,,0,0,
+external_e1/Grade 1/v4_patch_31717.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,74,0,"285,405,521,669"
+external_e1/Grade 1/v4_patch_31764.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪│┘â┘å╪⌐.jpg,21,5,"560,153,766,370"
+external_e1/Grade 3/v4_patch_31801.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52983137_324624261499391_1465986803298205696_n.jpg,162,14,"210,326,390,521"
+external_e1/Grade 2/v4_patch_31818.jpg,Grade 2,,0,0,
+external_e1/Grade 2/v4_patch_31825.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53146073_2137924073184830_9170379390326931456_n.jpg,68,0,"42,344,231,517"
+external_e1/Grade 2/v4_patch_31828.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,58,0,"14,101,270,365"
+external_e1/Grade 2/v4_patch_31831.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51874792_364990657668581_6623361877109899264_n.jpg,30,0,"35,136,210,303"
+external_e1/Grade 1/v4_patch_31845.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51813427_413740355860528_579357505881112576_n.jpg,27,0,"360,203,561,390"
+external_e1/Grade 2/v4_patch_31857.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52011346_2215509382097950_1564727031986388992_n.jpg,46,0,"4,-0,323,282"
+external_e1/Grade 1/v4_patch_42719.jpg,Grade 1,,9,0,
+external_e1/Grade 1/v4_patch_43130.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,45,0,"357,302,529,451"
+external_e1/Grade 1/v4_patch_43246.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,170,0,"233,130,817,724"
+external_e1/Grade 1/v4_patch_43340.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51781087_412031686046224_3554042230069002240_n.jpg,13,0,"129,192,321,387"
+external_e1/Grade 1/v4_patch_43623.jpg,Grade 1,,0,0,
+external_e1/Grade 1/v4_patch_43673.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51970702_406217973518093_8210891375802056704_n.jpg,12,0,"233,459,624,805"
+external_e1/Grade 1/v4_patch_43729.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,120,4,"479,118,1043,598"
+external_e1/Grade 0/v4_patch_43732.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100061_529428137498855_850798648714330112_n.jpg,50,0,"255,515,574,805"
+external_e1/Grade 1/v4_patch_43744.jpg,Grade 1,,10,0,
+external_e1/Grade 1/v4_patch_43805.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,172,0,"265,379,587,715"
+external_e1/Grade 2/v4_patch_43837.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,56,8,"929,148,1142,382"
+external_e1/Grade 0/v4_patch_43894.jpg,Grade 0,,0,0,
+external_e1/Grade 1/v4_patch_43937.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51747317_817848398551001_8819094917130223616_n.jpg,115,0,"160,342,363,531"
+external_e1/Grade 1/v4_patch_43976.jpg,Grade 1,,0,0,
+external_e1/Grade 2/v4_patch_44018.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,121,0,"321,5,592,265"
+external_e1/Grade 1/v4_patch_44025.jpg,Grade 1,,8,0,
+external_e1/Grade 1/v4_patch_44066.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52427921_788743391505332_9028806221594886144_n.jpg,70,0,"300,370,465,508"
+external_e1/Grade 1/v4_patch_44107.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,14,0,"850,125,1142,450"
+external_e1/Grade 2/v4_patch_44132.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51664948_353656301890219_8952929980724019200_n.jpg,72,0,"76,462,471,830"
+external_e1/Grade 1/v4_patch_44136.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51747317_817848398551001_8819094917130223616_n.jpg,39,4,"1,451,190,638"
+external_e1/Grade 1/v4_patch_44152.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52269858_679885332408072_4126378993429512192_n.jpg,54,0,"180,537,601,899"
+external_e1/Grade 1/v4_patch_44193.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,53,0,"744,88,1063,417"
+external_e1/Grade 2/v4_patch_44216.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51768447_623677341391977_766185130103406592_n.jpg,57,0,"204,349,672,798"
+external_e1/Grade 1/v4_patch_44221.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51754591_2131917850178589_3095084442885029888_n.jpg,105,0,"428,289,747,603"
+external_e1/Grade 1/v4_patch_44236.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51993319_396952441071793_4103488497074044928_n.jpg,117,8,"120,345,385,592"
+external_e1/Grade 1/v4_patch_44257.jpg,Grade 1,,5,0,
+external_e1/Grade 1/v4_patch_44270.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51813427_413740355860528_579357505881112576_n.jpg,23,0,"1055,435,1244,638"
+external_e1/Grade 2/v4_patch_44283.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52038570_377260716185453_3124551839840731136_n.jpg,35,11,"145,205,469,518"
+external_e1/Grade 1/v4_patch_44285.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪│┘â┘å╪⌐.jpg,12,0,"1857,228,2039,404"
+external_e1/Grade 2/v4_patch_44302.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51956089_2101203003290846_9120892802912223232_n.jpg,75,0,"435,341,739,580"
+external_e1/Grade 1/v4_patch_44306.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,22,0,"97,481,223,602"
+external_e1/Grade 2/v4_patch_45576.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52024230_293426397988900_6645870752736215040_n.jpg,59,4,"4,101,340,443"
+external_e1/Grade 2/v4_patch_45582.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,90,5,"1012,405,1244,654"
+external_e1/Grade 1/v4_patch_45620.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52898452_459803781222228_8818480199935983616_n.jpg,65,0,"153,85,545,431"
+external_e1/Grade 0/v4_patch_45674.jpg,Grade 0,,0,0,
+external_e1/Grade 0/v4_patch_45832.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪» ╪╣╪¿╪» ╪│┘ä╪╖╪º┘å.jpg,12,0,"600,416,954,756"
+external_e1/Grade 1/v4_patch_45907.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,43,0,"290,458,627,801"
+external_e1/Grade 0/v4_patch_45913.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51904351_2273306822953856_3457711791566487552_n.jpg,15,0,"333,385,610,641"
+external_e1/Grade 1/v4_patch_45917.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,65,0,"511,8,860,370"
+external_e1/Grade 2/v4_patch_45966.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51874747_2065109713558566_4555611457986756608_n.jpg,69,0,"241,213,571,541"
+external_e1/Grade 1/v4_patch_45980.jpg,Grade 1,,7,0,
+external_e1/Grade 1/v4_patch_46012.jpg,Grade 1,,10,0,
+external_e1/Grade 0/v4_patch_46038.jpg,Grade 0,,4,0,
+external_e1/Grade 1/v4_patch_46102.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51754591_2131917850178589_3095084442885029888_n.jpg,111,9,"398,139,819,552"
+external_e1/Grade 0/v4_patch_46113.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51675451_800582506943762_1704939503539453952_n.jpg,82,10,"614,62,940,374"
+external_e1/Grade 1/v4_patch_46120.jpg,Grade 1,,7,0,
+external_e1/Grade 0/v4_patch_46226.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52960008_1924209517701020_3629279332561584128_n.jpg,17,5,"236,321,503,525"
+external_e1/Grade 2/v4_patch_46227.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51608202_540873169654642_8922852337635033088_n.jpg,57,0,"105,555,496,940"
+external_e1/Grade 1/v4_patch_46247.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/374382_439097302838244_616116898_n.jpg,46,11,"200,17,298,122"
+external_e1/Grade 2/v4_patch_46272.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51608202_540873169654642_8922852337635033088_n.jpg,81,0,"242,280,558,602"
+external_e1/Grade 2/v4_patch_46290.jpg,Grade 2,,10,0,
+external_e1/Grade 0/v4_patch_46344.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52893683_309124839801524_5592826745502826496_n.jpg,52,0,"466,95,730,326"
+external_e1/Grade 1/v4_patch_46373.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,56,0,"239,160,559,517"
+external_e1/Grade 1/v4_patch_46380.jpg,Grade 1,,15,11,
+external_e1/Grade 1/v4_patch_46387.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪│┘â┘å╪⌐.jpg,13,4,"678,434,900,662"
+external_e1/Grade 0/v4_patch_46416.jpg,Grade 0,,0,0,
+external_e1/Grade 1/v4_patch_46452.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,86,0,"565,126,967,503"
+external_e1/Grade 1/v4_patch_46512.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪╣┘ä┘è ┘ü╪º╪╢┘ä.jpg,26,0,"613,499,863,733"
+external_e1/Grade 1/v4_patch_46536.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg,13,0,"470,518,729,796"
+external_e1/Grade 1/v4_patch_46549.jpg,Grade 1,,10,0,
+external_e1/Grade 0/v4_patch_46553.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52960008_1924209517701020_3629279332561584128_n.jpg,50,9,"224,520,498,765"
+external_e1/Grade 1/v4_patch_46556.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,82,0,"518,361,823,661"
+external_e1/Grade 1/v4_patch_46585.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,154,0,"529,115,1003,636"
+external_e1/Grade 0/v4_patch_46588.jpg,Grade 0,,8,0,
+external_e1/Grade 2/v4_patch_46589.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51956089_2101203003290846_9120892802912223232_n.jpg,74,0,"281,75,584,320"
+external_e1/Grade 0/v4_patch_46601.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘é╪▒╪¡╪⌐.jpg,14,0,"305,1405,508,1613"
+external_e1/Grade 1/v4_patch_46606.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg,15,0,"377,667,610,913"
+external_e1/Grade 1/v4_patch_46609.jpg,Grade 1,,9,8,
+external_e1/Grade 1/v4_patch_46626.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52290072_288278388503662_4626597947310604288_n.jpg,139,46,"496,77,839,425"
+external_e1/Grade 3/v4_patch_47329.jpg,Grade 3,,6,5,
+external_e1/Grade 2/v4_patch_47638.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,122,0,"275,32,544,303"
+external_e1/Grade 2/v4_patch_47642.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51847193_1198079097034739_7666106518407741440_n.jpg,76,9,"166,241,556,623"
+external_e1/Grade 3/v4_patch_47674.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40233537_608439979551518_67612844052447232_n.jpg,73,8,"190,240,434,479"
+external_e1/Grade 2/v4_patch_47912.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,72,0,"419,184,678,460"
+external_e1/Grade 2/v4_patch_47923.jpg,Grade 2,,6,0,
+external_e1/Grade 0/v4_patch_48004.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100061_529428137498855_850798648714330112_n.jpg,46,0,"310,588,569,805"
+external_e1/Grade 1/v4_patch_48138.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842320_2103300119956121_104957898223779840_n.jpg,78,0,"42,333,623,895"
+external_e1/Grade 2/v4_patch_48216.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52123761_320182518622865_2722884148971700224_n.jpg,170,0,"66,87,397,379"
+external_e1/Grade 2/v4_patch_48248.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52063592_327746397836027_7699621088816267264_n.jpg,54,0,"67,116,283,329"
+external_e1/Grade 3/v4_patch_48266.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52011346_2215509382097950_1564727031986388992_n.jpg,71,0,"146,272,559,668"
+external_e1/Grade 2/v4_patch_48295.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51783571_1934254266684087_6944160535000645632_n.jpg,40,0,"223,41,442,284"
+external_e1/Grade 2/v4_patch_48305.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52063592_327746397836027_7699621088816267264_n.jpg,36,0,"272,52,591,352"
+external_e1/Grade 2/v4_patch_48306.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52117938_814622648937232_500011498370760704_n.jpg,83,0,"279,98,477,303"
+external_e1/Grade 1/v4_patch_48330.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52439580_303060813746178_42485588858765312_n.jpg,150,0,"161,351,384,568"
+external_e1/Grade 0/v4_patch_48339.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100061_529428137498855_850798648714330112_n.jpg,27,0,"385,578,559,781"
+external_e1/Grade 1/v4_patch_48387.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51978504_555724031611811_5912875588003037184_n.jpg,16,7,"398,280,524,404"
+external_e1/Grade 1/v4_patch_48435.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52335264_780777285613445_8055000650120953856_n.jpg,48,0,"505,158,698,352"
+external_e1/Grade 2/v4_patch_48469.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53178322_991406074378351_2435687412534345728_n.jpg,210,0,"133,284,531,681"
+external_e1/Grade 0/v4_patch_48481.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51953778_258058231752175_195657097730326528_n.jpg,26,0,"87,442,331,682"
+external_e1/Grade 2/v4_patch_48525.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52063592_327746397836027_7699621088816267264_n.jpg,50,0,"70,169,328,409"
+external_e1/Grade 3/v4_patch_48542.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/rrrrdddd.jpg,80,0,"467,303,740,581"
+external_e1/Grade 3/v4_patch_48544.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪┤╪▒┘è┘ü.jpg,53,0,"887,434,1259,759"
+external_e1/Grade 3/v4_patch_48545.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53084622_1543060975838394_486984067993042944_n.jpg,44,5,"587,222,746,366"
+external_e1/Grade 3/v4_patch_48578.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪»╪⌐ ┘à╪▒╪º╪¡.jpg,84,0,"230,1058,434,1247"
+external_e1/Grade 2/v4_patch_48587.jpg,Grade 2,,0,0,
+external_e1/Grade 2/v4_patch_48602.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52063592_327746397836027_7699621088816267264_n.jpg,130,0,"583,65,981,440"
+external_e1/Grade 0/v4_patch_48634.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51904351_2273306822953856_3457711791566487552_n.jpg,36,0,"5,623,300,956"
+external_e1/Grade 3/v4_patch_48638.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52008460_553618491781396_6915093308737847296_n.jpg,245,0,"183,325,370,519"
+external_e1/Grade 2/v4_patch_48640.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842370_560309807805119_6735023119771107328_n.jpg,17,0,"80,175,341,432"
+external_e1/Grade 1/v4_patch_48655.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52281229_612213579249093_6164069606462849024_n.jpg,13,0,"82,400,722,1020"
+external_e1/Grade 2/v4_patch_48656.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,115,0,"186,234,453,513"
+external_e1/Grade 3/v4_patch_48664.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52983137_324624261499391_1465986803298205696_n.jpg,176,0,"58,385,246,562"
+external_e1/Grade 3/v4_patch_48665.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52987333_332205867411199_3486060117613346816_n.jpg,70,0,"178,14,360,193"
+external_e1/Grade 3/v4_patch_48666.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52927498_378124226358533_6907191887468167168_n.jpg,250,49,"565,99,777,328"
+external_e1/Grade 2/v4_patch_48669.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51855821_2291824434475322_7031402762575282176_n.jpg,129,15,"107,347,406,637"
+external_e1/Grade 3/v4_patch_48677.jpg,Grade 3,,6,0,
+external_e1/Grade 2/v4_patch_48689.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51954203_774954762861095_1392107799529390080_n.jpg,66,0,"292,317,596,599"
+external_e1/Grade 2/v4_patch_48703.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51946501_807020342964506_328645503010996224_n.jpg,32,0,"437,2,670,229"
+external_e1/Grade 3/v4_patch_48706.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40058516_281069489386956_2617358048049496064_n.jpg,262,0,"285,277,551,580"
+external_e1/Grade 2/v4_patch_48710.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51847193_1198079097034739_7666106518407741440_n.jpg,49,0,"439,3,820,325"
+external_e1/Grade 3/v4_patch_48742.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40943308_459418787874895_7749403947370020864_n.jpg,244,0,"298,517,657,880"
+external_e1/Grade 2/v4_patch_48780.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,53,0,"273,228,532,486"
+external_e1/Grade 3/v4_patch_48797.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51795551_387825175429049_5388304199618396160_n.jpg,36,10,"600,252,937,592"
+external_e1/Grade 2/v4_patch_48819.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51936885_786801928379396_5314115825060282368_n.jpg,29,0,"454,393,709,650"
+external_e1/Grade 1/v4_patch_48832.jpg,Grade 1,,7,6,
+external_e1/Grade 2/v4_patch_48841.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51567868_1024401847743690_2713987841477574656_n.jpg,81,40,"110,541,371,797"
+external_e1/Grade 2/v4_patch_48849.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52117938_814622648937232_500011498370760704_n.jpg,40,0,"915,246,1054,402"
+external_e1/Grade 3/v4_patch_48855.jpg,Grade 3,,38,25,
+external_e1/Grade 0/v4_patch_48858.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100061_529428137498855_850798648714330112_n.jpg,51,0,"255,515,574,805"
+external_e1/Grade 3/v4_patch_48860.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘â┘å╪╖╪º╪▒╪⌐.jpg,115,27,"1243,164,1515,406"
+external_e1/Grade 2/v4_patch_48883.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51984865_422823171787068_6820525851231125504_n.jpg,13,0,"349,479,501,610"
+external_e1/Grade 3/v4_patch_48887.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53117785_2460643370672500_861234714868973568_n.jpg,169,0,"121,294,288,459"
+external_e1/Grade 2/v4_patch_48898.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,97,0,"459,264,763,558"
+external_e1/Grade 3/v4_patch_48900.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52983137_324624261499391_1465986803298205696_n.jpg,121,5,"226,140,412,329"
+external_e1/Grade 3/v4_patch_48903.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51983515_1152340711592949_2875032725482373120_n.jpg,43,0,"313,516,494,712"
+external_e1/Grade 0/v4_patch_48910.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51794166_799170277109280_3033704365178224640_n.jpg,20,0,"342,171,598,407"
+external_e1/Grade 1/v4_patch_48916.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,27,0,"449,394,673,635"
+external_e1/Grade 3/v4_patch_48923.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪┤╪▒┘è┘ü.jpg,82,0,"661,489,1062,854"
+external_e1/Grade 2/v4_patch_48924.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51847159_1281628641993421_7737370621532700672_n.jpg,40,0,"44,798,423,1171"
+external_e1/Grade 2/v4_patch_48926.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842370_560309807805119_6735023119771107328_n.jpg,129,0,"609,188,888,457"
+external_e1/Grade 3/v4_patch_48930.jpg,Grade 3,,6,0,
+external_e1/Grade 1/v4_patch_48931.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51993319_396952441071793_4103488497074044928_n.jpg,107,9,"100,346,384,603"
+external_e1/Grade 2/v4_patch_48935.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,99,0,"355,80,581,319"
+external_e1/Grade 3/v4_patch_48941.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53280695_317573982110066_582895008449822720_n.jpg,137,4,"637,171,807,343"
+external_e1/Grade 3/v4_patch_48951.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52011346_2215509382097950_1564727031986388992_n.jpg,61,0,"3,189,328,518"
+external_e1/Grade 2/v4_patch_48957.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51989112_2386140148273476_2606128847464169472_n.jpg,142,10,"832,233,1147,518"
+external_e1/Grade 2/v4_patch_48964.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,25,4,"759,97,953,281"
+external_e1/Grade 0/v4_patch_48965.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51935314_320775835227582_6486983462732431360_n.jpg,27,0,"118,3,481,305"
+external_e1/Grade 3/v4_patch_48972.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘â┘å╪╖╪º╪▒╪⌐.jpg,134,38,"967,159,1247,405"
+external_e1/Grade 1/v4_patch_48977.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52170499_391827064960754_1759080332264472576_n.jpg,165,0,"124,246,434,553"
+external_e1/Grade 0/v4_patch_48995.jpg,Grade 0,,6,6,
+external_e1/Grade 3/v4_patch_48999.jpg,Grade 3,,8,7,
+external_e1/Grade 2/v4_patch_49009.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52151375_2362088160678153_4055269135465054208_n.jpg,62,0,"203,101,464,357"
+external_e1/Grade 2/v4_patch_49019.jpg,Grade 2,,0,0,
+external_e1/Grade 2/v4_patch_49020.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,55,0,"112,255,384,527"
+external_e1/Grade 2/v4_patch_49022.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51865935_2162079877146845_8516770051745906688_n.jpg,132,16,"123,329,367,580"
+external_e1/Grade 2/v4_patch_50340.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52011346_2215509382097950_1564727031986388992_n.jpg,35,0,"308,3,606,278"
+external_e1/Grade 2/v4_patch_50360.jpg,Grade 2,,18,14,
+external_e1/Grade 1/v4_patch_50363.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51754591_2131917850178589_3095084442885029888_n.jpg,66,7,"528,155,809,456"
+external_e1/Grade 2/v4_patch_50558.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51855821_2291824434475322_7031402762575282176_n.jpg,65,14,"310,582,659,906"
+external_e1/Grade 1/v4_patch_50625.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52281229_612213579249093_6164069606462849024_n.jpg,129,0,"112,418,645,987"
+external_e1/Grade 2/v4_patch_50697.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,112,0,"100,108,324,349"
+external_e1/Grade 1/v4_patch_50820.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,67,0,"1050,496,1306,748"
+external_e1/Grade 2/v4_patch_50835.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51874747_2065109713558566_4555611457986756608_n.jpg,62,0,"137,260,442,545"
+external_e1/Grade 2/v4_patch_50868.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40116280_2131550607163470_7835917413483806720_n.jpg,57,0,"586,281,1107,729"
+external_e1/Grade 3/v4_patch_50917.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪»╪⌐ ┘à╪▒╪º╪¡.jpg,37,0,"353,1050,509,1215"
+external_e1/Grade 2/v4_patch_50977.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51874747_2065109713558566_4555611457986756608_n.jpg,71,0,"89,361,421,658"
+external_e1/Grade 3/v4_patch_50984.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,261,11,"725,228,911,412"
+external_e1/Grade 0/v4_patch_51040.jpg,Grade 0,,0,0,
+external_e1/Grade 1/v4_patch_51048.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,68,0,"1252,489,1503,740"
+external_e1/Grade 1/v4_patch_51220.jpg,Grade 1,,4,0,
+external_e1/Grade 0/v4_patch_51280.jpg,Grade 0,,10,0,
+external_e1/Grade 1/v4_patch_51302.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,106,0,"533,622,739,818"
+external_e1/Grade 2/v4_patch_51389.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40111620_512775102497985_2972172627881230336_n.jpg,163,0,"806,140,1168,508"
+external_e1/Grade 0/v4_patch_51392.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53224137_796426724058574_183433474777022464_n.jpg,29,0,"549,76,927,445"
+external_e1/Grade 1/v4_patch_51427.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842320_2103300119956121_104957898223779840_n.jpg,81,0,"84,354,648,906"
+external_e1/Grade 3/v4_patch_51442.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51795551_387825175429049_5388304199618396160_n.jpg,37,10,"708,420,996,672"
+external_e1/Grade 1/v4_patch_51446.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,25,0,"990,186,1170,340"
+external_e1/Grade 1/v4_patch_51459.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,177,0,"204,116,765,667"
+external_e1/Grade 2/v4_patch_51466.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52020587_782464015472470_1572675362888876032_n.jpg,33,9,"772,168,1019,390"
+external_e1/Grade 2/v4_patch_51516.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51851228_2319386861651500_9211483666163695616_n.jpg,99,0,"134,448,522,824"
+external_e1/Grade 1/v4_patch_51523.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,91,0,"334,290,622,584"
+external_e1/Grade 1/v4_patch_51532.jpg,Grade 1,,8,0,
+external_e1/Grade 2/v4_patch_51535.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51664948_353656301890219_8952929980724019200_n.jpg,84,0,"98,429,493,830"
+external_e1/Grade 2/v4_patch_51601.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51855821_2291824434475322_7031402762575282176_n.jpg,70,10,"303,385,627,675"
+external_e1/Grade 3/v4_patch_51614.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52927498_378124226358533_6907191887468167168_n.jpg,258,26,"320,86,568,325"
+external_e1/Grade 2/v4_patch_51652.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52732945_2286394278066773_181165079209705472_n.jpg,15,0,"435,327,597,469"
+external_e1/Grade 1/v4_patch_51695.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52290072_288278388503662_4626597947310604288_n.jpg,110,46,"478,102,838,435"
+external_e1/Grade 1/v4_patch_51698.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52947203_2002480693380731_7008819313431805952_n.jpg,13,0,"296,72,469,243"
+external_e1/Grade 2/v4_patch_51715.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53055705_2319146521637967_7113294045014654976_n.jpg,115,0,"304,102,750,519"
+external_e1/Grade 2/v4_patch_51717.jpg,Grade 2,,28,21,
+external_e1/Grade 1/v4_patch_51718.jpg,Grade 1,,0,0,
+external_e1/Grade 1/v4_patch_51736.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51800923_402404833902939_2858222923565498368_n.jpg,51,8,"184,669,405,896"
+external_e1/Grade 2/v4_patch_51746.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,108,0,"487,154,784,461"
+external_e1/Grade 2/v4_patch_51747.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40111620_512775102497985_2972172627881230336_n.jpg,99,0,"961,142,1256,472"
+external_e1/Grade 2/v4_patch_51773.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51768447_623677341391977_766185130103406592_n.jpg,81,9,"62,745,573,1306"
+external_e1/Grade 1/v4_patch_51779.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52669909_292819728074291_6340199583842304000_n.jpg,113,0,"384,195,786,540"
+external_e1/Grade 1/v4_patch_51801.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51848097_2191241644520820_6788096464439476224_n.jpg,47,0,"501,220,1044,627"
+external_e1/Grade 1/v4_patch_51807.jpg,Grade 1,,47,28,
+external_e1/Grade 1/v4_patch_52625.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51968894_393614504725915_5061697362963988480_n.jpg,106,12,"255,518,523,810"
+external_e1/Grade 2/v4_patch_53383.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52732945_2286394278066773_181165079209705472_n.jpg,166,0,"702,278,1038,576"
+external_e1/Grade 1/v4_patch_53390.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51854155_2050144488395616_7843512749614170112_n.jpg,51,0,"777,149,993,368"
+external_e1/Grade 0/v4_patch_53392.jpg,Grade 0,,9,0,
+external_e1/Grade 2/v4_patch_53394.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40145569_722511494772907_3583758047933104128_n.jpg,139,6,"637,448,903,764"
+external_e1/Grade 0/v4_patch_53400.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40152324_676265276071443_3891772576753516544_n.jpg,99,6,"120,429,324,610"
+external_e1/Grade 3/v4_patch_53401.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53112108_764639480577903_8301929057386233856_n.jpg,283,0,"158,240,465,530"
+external_e1/Grade 2/v4_patch_53403.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40111620_512775102497985_2972172627881230336_n.jpg,110,0,"751,253,1071,556"
+external_e1/Grade 1/v4_patch_53406.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40233571_252687522242453_978256712370749440_n.jpg,30,0,"281,403,508,662"
+external_e1/Grade 1/v4_patch_53419.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/404949128851572507.jpg,37,0,"260,75,400,196"
+external_e1/Grade 2/v4_patch_53426.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52854595_382965332284967_3491419575373791232_n.jpg,106,4,"94,94,291,303"
+external_e1/Grade 2/v4_patch_53447.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51793334_1180076592168559_694132724385972224_n.jpg,64,0,"372,55,659,312"
+external_e1/Grade 2/v4_patch_53452.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51865935_2162079877146845_8516770051745906688_n.jpg,237,19,"141,420,426,711"
+external_e1/Grade 1/v4_patch_53453.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51781087_412031686046224_3554042230069002240_n.jpg,16,0,"2,221,150,381"
+external_e1/Grade 2/v4_patch_53456.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51935314_320775835227582_6486983462732431360_n.jpg,106,0,"272,295,732,672"
+external_e1/Grade 0/v4_patch_53459.jpg,Grade 0,,11,0,
+external_e1/Grade 2/v4_patch_53471.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,44,0,"685,92,975,380"
+external_e1/Grade 1/v4_patch_53473.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52326943_2118930968144942_2448288545933099008_n.jpg,45,5,"154,353,390,555"
+external_e1/Grade 1/v4_patch_53481.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51813427_413740355860528_579357505881112576_n.jpg,51,6,"1083,375,1374,661"
+external_e1/Grade 2/v4_patch_53489.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52117938_814622648937232_500011498370760704_n.jpg,75,0,"270,183,497,383"
+external_e1/Grade 0/v4_patch_53498.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51904351_2273306822953856_3457711791566487552_n.jpg,30,5,"230,571,628,927"
+external_e1/Grade 2/v4_patch_53499.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52151375_2362088160678153_4055269135465054208_n.jpg,175,29,"27,516,387,869"
+external_e1/Grade 1/v4_patch_53507.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,57,0,"247,388,400,548"
+external_e1/Grade 1/v4_patch_53509.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51813427_413740355860528_579357505881112576_n.jpg,27,0,"1180,383,1396,617"
+external_e1/Grade 2/v4_patch_53515.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/301502_439096869504954_1816155530_n.jpg,96,5,"99,59,210,167"
+external_e1/Grade 1/v4_patch_53550.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40152198_324618121608506_490743860889124864_n.jpg,12,0,"1156,214,1345,376"
+external_e1/Grade 1/v4_patch_53553.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52439580_303060813746178_42485588858765312_n.jpg,129,0,"174,348,378,564"
+external_e1/Grade 2/v4_patch_53567.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51759656_378276979636564_4642156840002519040_n.jpg,99,0,"18,339,372,686"
+external_e1/Grade 1/v4_patch_53569.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52766842_553738755138733_4660913657968852992_n.jpg,19,0,"503,288,658,426"
+external_e1/Grade 1/v4_patch_53579.jpg,Grade 1,,6,6,
+external_e1/Grade 1/v4_patch_53590.jpg,Grade 1,,7,0,
+external_e1/Grade 1/v4_patch_53595.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842320_2103300119956121_104957898223779840_n.jpg,95,0,"378,362,681,679"
+external_e1/Grade 2/v4_patch_53596.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40111620_512775102497985_2972172627881230336_n.jpg,185,0,"723,158,1011,429"
+external_e1/Grade 2/v4_patch_53601.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51855821_2291824434475322_7031402762575282176_n.jpg,20,8,"142,727,615,1089"
+external_e1/Grade 2/v4_patch_53605.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,111,0,"711,282,1020,610"
+external_e1/Grade 2/v4_patch_53607.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,32,0,"1058,317,1291,506"
+external_e1/Grade 3/v4_patch_53620.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪┤╪▒┘è┘ü.jpg,65,0,"378,650,664,953"
+external_e1/Grade 0/v4_patch_53623.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52338482_2334888246530827_204155412079968256_n.jpg,126,0,"280,515,579,795"
+external_e1/Grade 2/v4_patch_53627.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51933269_376656019558212_8631627634838601728_n.jpg,48,0,"135,139,416,392"
+external_e1/Grade 2/v4_patch_53635.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51847159_1281628641993421_7737370621532700672_n.jpg,37,0,"326,5,651,319"
+external_e1/Grade 3/v4_patch_53636.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51797944_254790468769500_1401433397594685440_n.jpg,68,27,"192,546,389,742"
+external_e1/Grade 3/v4_patch_53638.jpg,Grade 3,,4,0,
+external_e1/Grade 1/v4_patch_53643.jpg,Grade 1,,7,0,
+external_e1/Grade 3/v4_patch_53649.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52001294_314960835800000_6704481942336700416_n.jpg,27,0,"866,320,1134,516"
+external_e1/Grade 2/v4_patch_53650.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,109,9,"1020,224,1296,507"
+external_e1/Grade 1/v4_patch_53652.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,151,0,"340,81,692,405"
+external_e1/Grade 1/v4_patch_53659.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,154,0,"204,238,497,575"
+external_e1/Grade 1/v4_patch_53660.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪╣┘ä┘è ┘ü╪º╪╢┘ä.jpg,28,0,"702,176,1030,529"
+external_e1/Grade 3/v4_patch_53699.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51797944_254790468769500_1401433397594685440_n.jpg,19,9,"210,741,462,948"
+external_e1/Grade 1/v4_patch_53713.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,58,0,"633,649,839,887"
+external_e1/Grade 3/v4_patch_53716.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪»╪⌐ ┘à╪▒╪º╪¡.jpg,108,0,"542,281,788,535"
+external_e1/Grade 1/v4_patch_53718.jpg,Grade 1,,0,0,
+external_e1/Grade 3/v4_patch_53728.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51797944_254790468769500_1401433397594685440_n.jpg,86,40,"180,591,452,819"
+external_e1/Grade 2/v4_patch_53734.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51567868_1024401847743690_2713987841477574656_n.jpg,64,24,"42,545,262,762"
+external_e1/Grade 2/v4_patch_53748.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51608202_540873169654642_8922852337635033088_n.jpg,93,0,"209,278,578,646"
+external_e1/Grade 2/v4_patch_53751.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51915519_1982447778471205_3884023704132255744_n.jpg,198,0,"187,208,469,484"
+external_e1/Grade 2/v4_patch_53752.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51847193_1198079097034739_7666106518407741440_n.jpg,91,9,"273,286,618,637"
+external_e1/Grade 1/v4_patch_53756.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,119,0,"412,616,674,862"
+external_e1/Grade 1/v4_patch_53757.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52281229_612213579249093_6164069606462849024_n.jpg,148,0,"128,431,665,861"
+external_e1/Grade 2/v4_patch_53758.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52024230_293426397988900_6645870752736215040_n.jpg,134,0,"56,500,472,846"
+external_e1/Grade 1/v4_patch_53759.jpg,Grade 1,,0,0,
+external_e1/Grade 0/v4_patch_53779.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52984136_2013003765660977_8028312092710797312_n.jpg,64,0,"128,529,484,864"
+external_e1/Grade 1/v4_patch_53788.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40233571_252687522242453_978256712370749440_n.jpg,18,0,"42,523,231,710"
+external_e1/Grade 3/v4_patch_53790.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,20,0,"60,463,371,768"
+external_e1/Grade 2/v4_patch_53792.jpg,Grade 2,,61,43,
+external_e1/Grade 1/v4_patch_53796.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842320_2103300119956121_104957898223779840_n.jpg,80,0,"67,382,373,724"
+external_e1/Grade 0/v4_patch_53799.jpg,Grade 0,,0,0,
+external_e1/Grade 2/v4_patch_53803.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51914319_607718429670827_8504055196203089920_n.jpg,96,5,"540,17,762,238"
+external_e1/Grade 2/v4_patch_53807.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,85,0,"153,551,401,812"
+external_e1/Grade 2/v4_patch_53809.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51692372_2254313728154951_4357764987792392192_n.jpg,95,0,"25,296,322,601"
+external_e1/Grade 2/v4_patch_53812.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52877815_1701412646823950_1220694692673355776_n.jpg,326,0,"299,362,602,679"
+external_e1/Grade 0/v4_patch_53817.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40141547_284116888846742_3137652812943458304_n.jpg,14,0,"824,135,1042,340"
+external_e1/Grade 2/v4_patch_53825.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51954203_774954762861095_1392107799529390080_n.jpg,96,0,"204,182,499,443"
+external_e1/Grade 1/v4_patch_53829.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52259339_771986766503759_5407247603848970240_n.jpg,59,0,"320,251,494,398"
+external_e1/Grade 2/v4_patch_53832.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51759656_378276979636564_4642156840002519040_n.jpg,86,0,"36,567,480,961"
+external_e1/Grade 1/v4_patch_53844.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51854155_2050144488395616_7843512749614170112_n.jpg,20,0,"1032,107,1260,350"
+external_e1/Grade 0/v4_patch_53845.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51904351_2273306822953856_3457711791566487552_n.jpg,22,0,"13,447,318,728"
+external_e1/Grade 2/v4_patch_53850.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51842370_560309807805119_6735023119771107328_n.jpg,42,0,"277,194,548,457"
+external_e1/Normal/v4_patch_53855.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53857.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53860.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,19,0,"674,316,929,592"
+external_e1/Normal/v4_patch_53861.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53863.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53864.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51730857_2553003918104690_4228732071297679360_n.jpg,59,4,"479,100,808,428"
+external_e1/Normal/v4_patch_53866.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53867.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53869.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53870.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53871.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53872.jpg,Normal,,10,0,
+external_e1/Normal/v4_patch_53873.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53874.jpg,Normal,,6,0,
+external_e1/Normal/v4_patch_53875.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53877.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53878.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53879.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53880.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53881.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_53882.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53884.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53885.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53886.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53887.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53889.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53890.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53893.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53895.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53896.jpg,Normal,,5,0,
+external_e1/Normal/v4_patch_53898.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53899.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40028797_951340565052511_6248779048873361408_n.jpg,17,0,"323,129,493,307"
+external_e1/Normal/v4_patch_53901.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53902.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53903.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53904.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53905.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53906.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,12,0,"593,205,831,436"
+external_e1/Normal/v4_patch_53908.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53909.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53910.jpg,Normal,,11,0,
+external_e1/Normal/v4_patch_53911.jpg,Normal,,8,0,
+external_e1/Normal/v4_patch_53912.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_53913.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53914.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53915.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51730857_2553003918104690_4228732071297679360_n.jpg,28,0,"495,268,775,541"
+external_e1/Normal/v4_patch_53916.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53917.jpg,Normal,,11,0,
+external_e1/Normal/v4_patch_53918.jpg,Normal,,6,0,
+external_e1/Normal/v4_patch_53919.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53921.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53922.jpg,Normal,,5,0,
+external_e1/Normal/v4_patch_53923.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_53924.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,14,0,"168,221,444,494"
+external_e1/Normal/v4_patch_53925.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53926.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53927.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53928.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51868870_357686028409102_6840358502670532608_n.jpg,12,0,"585,162,856,446"
+external_e1/Normal/v4_patch_53929.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40215272_481705972328238_3946081626462617600_n.jpg,12,0,"409,257,593,437"
+external_e1/Normal/v4_patch_53930.jpg,Normal,,8,0,
+external_e1/Normal/v4_patch_53931.jpg,Normal,,10,0,
+external_e1/Normal/v4_patch_53932.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53933.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53934.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53935.jpg,Normal,,5,0,
+external_e1/Normal/v4_patch_53936.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53937.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53938.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53939.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53941.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53942.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53945.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53946.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53950.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51682765_394214241345105_6740431475734216704_n.jpg,14,0,"4,196,243,421"
+external_e1/Normal/v4_patch_53951.jpg,Normal,,5,0,
+external_e1/Normal/v4_patch_53952.jpg,Normal,,11,6,
+external_e1/Normal/v4_patch_53953.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53955.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51682765_394214241345105_6740431475734216704_n.jpg,18,0,"196,144,401,345"
+external_e1/Normal/v4_patch_53956.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53957.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53958.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53959.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53961.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52072563_2291715137752736_7641927226920796160_n.jpg,24,0,"598,282,874,519"
+external_e1/Normal/v4_patch_53962.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53963.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53964.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53965.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53967.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53970.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53971.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53972.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53973.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53974.jpg,Normal,,9,0,
+external_e1/Normal/v4_patch_53975.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53976.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53977.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53978.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53979.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53980.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53981.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53982.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53983.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51682765_394214241345105_6740431475734216704_n.jpg,64,0,"162,612,442,861"
+external_e1/Normal/v4_patch_53984.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40028797_951340565052511_6248779048873361408_n.jpg,28,0,"323,75,522,269"
+external_e1/Normal/v4_patch_53986.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53989.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53990.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53991.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53992.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53995.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_53996.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,34,0,"1039,199,1255,441"
+external_e1/Normal/v4_patch_53997.jpg,Normal,,6,0,
+external_e1/Normal/v4_patch_53998.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_53999.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54000.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54001.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51730857_2553003918104690_4228732071297679360_n.jpg,78,11,"548,54,801,297"
+external_e1/Normal/v4_patch_54002.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54005.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54006.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_54007.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54010.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54011.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40028797_951340565052511_6248779048873361408_n.jpg,15,0,"267,552,429,707"
+external_e1/Normal/v4_patch_54012.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54013.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54014.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54015.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54016.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40100070_680143972353035_3819643939661545472_n.jpg,20,0,"1166,104,1360,320"
+external_e1/Normal/v4_patch_54017.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54018.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54019.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54020.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54021.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54023.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54024.jpg,Normal,,5,4,
+external_e1/Normal/v4_patch_54025.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54026.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54027.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54028.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54029.jpg,Normal,,10,0,
+external_e1/Normal/v4_patch_54030.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54031.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54033.jpg,Normal,,4,0,
+external_e1/Normal/v4_patch_54035.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54036.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54037.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54038.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54039.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54040.jpg,Normal,,4,0,
+external_e1/Normal/v4_patch_54041.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51747343_2030908093673796_1552613274296516608_n.jpg,12,5,"718,51,942,268"
+external_e1/Normal/v4_patch_54042.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54043.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54044.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54045.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54046.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40943308_459418787874895_7749403947370020864_n.jpg,91,0,"600,80,1040,529"
+external_e1/Normal/v4_patch_54047.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54048.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54050.jpg,Normal,,7,0,
+external_e1/Normal/v4_patch_54051.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54053.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51854155_2050144488395616_7843512749614170112_n.jpg,22,0,"273,16,608,334"
+external_e1/Normal/v4_patch_54054.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54055.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54057.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54058.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54059.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54060.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40234212_2207900922822299_5921388664155275264_n.jpg,34,0,"277,328,471,528"
+external_e1/Normal/v4_patch_54061.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54062.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54064.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54065.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54066.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54067.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54068.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40028797_951340565052511_6248779048873361408_n.jpg,18,0,"439,169,596,340"
+external_e1/Normal/v4_patch_54069.jpg,Normal,,11,0,
+external_e1/Normal/v4_patch_54070.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54071.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54072.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54073.jpg,Normal,,8,0,
+external_e1/Normal/v4_patch_54074.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54077.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54078.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54079.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54080.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54081.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54082.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54083.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54084.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40114337_2155498331385904_4730891749101142016_n.jpg,13,0,"900,397,1144,652"
+external_e1/Normal/v4_patch_54086.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54087.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54088.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54089.jpg,Normal,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52345689_345717262699571_7517594937383190528_n.jpg,16,0,"626,381,835,609"
+external_e1/Normal/v4_patch_54090.jpg,Normal,,6,0,
+external_e1/Normal/v4_patch_54091.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54092.jpg,Normal,,0,0,
+external_e1/Normal/v4_patch_54094.jpg,Normal,,0,0,
+external_e1/Grade 1/v4_patch_55360.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40161743_470925433411584_5592644707608952832_n.jpg,55,0,"287,108,571,415"
+external_e1/Grade 1/v4_patch_55377.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769677_646861145773446_5466967758300250112_n.jpg,105,0,"518,127,820,449"
+external_e1/Grade 0/v4_patch_55480.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51675451_800582506943762_1704939503539453952_n.jpg,92,0,"589,139,839,371"
+external_e1/Grade 0/v4_patch_55484.jpg,Grade 0,,7,0,
+external_e1/Grade 1/v4_patch_55500.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪│┘â┘å╪⌐.jpg,36,4,"1814,166,2131,468"
+external_e1/Grade 3/v4_patch_55524.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪»╪⌐ ┘à╪▒╪º╪¡.jpg,83,0,"512,433,782,696"
+external_e1/Grade 2/v4_patch_55527.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,183,0,"838,161,1189,550"
+external_e1/Grade 3/v4_patch_55530.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,285,0,"267,65,481,302"
+external_e1/Grade 2/v4_patch_55533.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘à╪¡┘ü┘ä┘å╪│╪«.jpg,118,0,"300,430,576,717"
+external_e1/Grade 0/v4_patch_55539.jpg,Grade 0,,10,0,
+external_e1/Grade 1/v4_patch_55553.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52025824_405006303396387_6772514009556975616_n.jpg,16,7,"394,-106,922,482"
+external_e1/Grade 2/v4_patch_55554.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52788198_2253557298298548_2588709654112501760_n.jpg,65,0,"79,2,320,221"
+external_e1/Grade 0/v4_patch_55562.jpg,Grade 0,,0,0,
+external_e1/Grade 0/v4_patch_55567.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52005936_2319974101354348_9122050614426075136_n.jpg,60,0,"132,949,492,1273"
+external_e1/Grade 0/v4_patch_55571.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40314955_1935276476531919_5633947462474399744_n.jpg,26,0,"1064,89,1280,306"
+external_e1/Grade 3/v4_patch_55576.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘â┘å╪╖╪º╪▒╪⌐.jpg,159,0,"185,117,482,408"
+external_e1/Grade 1/v4_patch_55577.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪╣┘ä┘è ┘ü╪º╪╢┘ä.jpg,29,0,"436,252,731,531"
+external_e1/Grade 2/v4_patch_55581.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40145569_722511494772907_3583758047933104128_n.jpg,105,4,"594,302,874,576"
+external_e1/Grade 1/v4_patch_55583.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪│┘â┘å╪⌐.jpg,17,6,"563,382,773,610"
+external_e1/Grade 3/v4_patch_55595.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/┘â┘å╪╖╪º╪▒╪⌐.jpg,119,0,"518,216,761,452"
+external_e1/Grade 1/v4_patch_55597.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51800923_402404833902939_2858222923565498368_n.jpg,25,0,"182,620,346,777"
+external_e1/Grade 2/v4_patch_55599.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52156688_262325001328063_4488024718745534464_n.jpg,136,0,"512,58,1217,619"
+external_e1/Grade 2/v4_patch_55600.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51814847_548907345629031_1716986440128135168_n.jpg,103,0,"1037,137,1396,524"
+external_e1/Grade 2/v4_patch_55616.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40145569_722511494772907_3583758047933104128_n.jpg,211,4,"491,455,781,776"
+external_e1/Grade 1/v4_patch_55619.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51769731_2221636438091228_58097593116262400_n.jpg,111,46,"135,271,398,532"
+external_e1/Grade 2/v4_patch_55621.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51956089_2101203003290846_9120892802912223232_n.jpg,159,0,"481,229,765,482"
+external_e1/Grade 2/v4_patch_55622.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/53381757_2467609363268296_3932223940251877376_n.jpg,117,0,"458,115,804,460"
+external_e1/Grade 1/v4_patch_55627.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,102,0,"342,340,523,514"
+external_e1/Grade 0/v4_patch_55636.jpg,Grade 0,,0,0,
+external_e1/Grade 0/v4_patch_55637.jpg,Grade 0,,8,0,
+external_e1/Grade 2/v4_patch_55639.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,127,0,"318,200,589,477"
+external_e1/Grade 0/v4_patch_55643.jpg,Grade 0,,5,0,
+external_e1/Grade 0/v4_patch_55647.jpg,Grade 0,,0,0,
+external_e1/Grade 2/v4_patch_55648.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51874747_2065109713558566_4555611457986756608_n.jpg,68,0,"46,464,338,786"
+external_e1/Grade 3/v4_patch_55652.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪▒╪┤┘è╪»╪⌐ ┘à╪▒╪º╪¡.jpg,111,0,"270,914,477,1136"
+external_e1/Grade 2/v4_patch_55676.jpg,Grade 2,,49,25,
+external_e1/Grade 1/v4_patch_55685.jpg,Grade 1,,51,36,
+external_e1/Grade 1/v4_patch_55692.jpg,Grade 1,,16,9,
+external_e1/Grade 1/v4_patch_55703.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,56,0,"489,174,708,404"
+external_e1/Grade 3/v4_patch_55707.jpg,Grade 3,,6,5,
+external_e1/Grade 0/v4_patch_55709.jpg,Grade 0,,10,0,
+external_e1/Grade 1/v4_patch_55719.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51813427_413740355860528_579357505881112576_n.jpg,41,0,"1090,383,1368,685"
+external_e1/Grade 1/v4_patch_55723.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52170499_391827064960754_1759080332264472576_n.jpg,150,0,"121,246,437,506"
+external_e1/Grade 2/v4_patch_55724.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51758604_536049470222332_2162260324068098048_n.jpg,145,4,"265,29,791,561"
+external_e1/Grade 1/v4_patch_55732.jpg,Grade 1,,8,0,
+external_e1/Grade 0/v4_patch_55733.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51675451_800582506943762_1704939503539453952_n.jpg,49,0,"773,140,1014,370"
+external_e1/Grade 2/v4_patch_55734.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51989112_2386140148273476_2606128847464169472_n.jpg,75,7,"347,333,555,534"
+external_e1/Grade 3/v4_patch_55740.jpg,Grade 3,,6,0,
+external_e1/Grade 1/v4_patch_55741.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,49,0,"423,336,585,518"
+external_e1/Grade 3/v4_patch_55749.jpg,Grade 3,,0,0,
+external_e1/Grade 1/v4_patch_55751.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51812027_546646505830839_9183257347252813824_n.jpg,114,0,"283,360,531,566"
+external_e1/Grade 2/v4_patch_55757.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51567868_1024401847743690_2713987841477574656_n.jpg,83,23,"166,483,410,725"
+external_e1/Grade 3/v4_patch_55766.jpg,Grade 3,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/40114337_2155498331385904_4730891749101142016_n.jpg,114,4,"117,85,461,401"
+external_e1/Grade 0/v4_patch_55770.jpg,Grade 0,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51838804_649531738810572_1860739644065316864_n.jpg,16,0,"190,63,422,306"
+external_e1/Grade 2/v4_patch_55772.jpg,Grade 2,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/52117938_814622648937232_500011498370760704_n.jpg,87,0,"708,210,900,391"
+external_e1/Grade 3/v4_patch_55779.jpg,Grade 3,,46,30,
+external_e1/Grade 1/v4_patch_55782.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/╪¿╪»┘ê┘å ╪╣┘å┘ê╪º┘å-1┘å╪│╪«.jpg33444444.jpg,84,0,"254,671,494,909"
+external_e1/Grade 1/v4_patch_55787.jpg,Grade 1,/home/augustocrmg/Repos/CLAUCIA-ML/datasets/externos/laithjj_diabetic-foot-ulcer-dfu/DFU/Original Images/51361417_390073928235564_6976026271759204352_n.jpg,79,0,"479,275,734,541"

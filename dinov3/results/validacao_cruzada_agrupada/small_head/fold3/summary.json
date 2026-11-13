@@ -1,0 +1,35 @@
+{
+  "size": "small",
+  "adaptation": "head",
+  "fold": 3,
+  "model_id": "/home/augustocrmg/Repos/cbeb_2026_camargo_et_al/novo_dataset/modelos_hf/dinov3-vits16",
+  "best_epoch": 41,
+  "best_val": {
+    "accuracy": 0.723404255319149,
+    "precision": 0.6997838139142487,
+    "recall": 0.7512547241118669,
+    "f1": 0.7003362777823957,
+    "auc_roc": 0.9328991885435759,
+    "auc_pr": 0.7557953808300659
+  },
+  "epochs_run": 50,
+  "train_minutes": 18.75940123796463,
+  "params_total": 21599239,
+  "params_trainable": 2695,
+  "test": {
+    "accuracy": 0.6553191489361702,
+    "precision": 0.5973581545400969,
+    "recall": 0.6549984750235377,
+    "f1": 0.5947487794014624,
+    "auc_roc": 0.9327514592847619,
+    "auc_pr": 0.7062145684035128
+  },
+  "e1": {
+    "accuracy": 0.6553191489361702,
+    "precision": 0.5973581545400969,
+    "recall": 0.6549984750235377,
+    "f1": 0.5947487794014624,
+    "auc_roc": 0.9327514592847619,
+    "auc_pr": 0.7062145684035128
+  }
+}

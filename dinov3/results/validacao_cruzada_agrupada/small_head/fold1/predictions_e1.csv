@@ -1,0 +1,236 @@
+arquivo,classe_real,classe_predita,prob_Grade 0,prob_Grade 1,prob_Grade 2,prob_Grade 3,prob_Grade 4,prob_Grade 5,prob_Normal
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1066.jpg,Grade 0,Grade 3,0.1436846,0.1744076,0.26181388,0.26206383,0.07576989,0.06113269,0.021127451
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1068.jpg,Grade 0,Grade 0,0.315986,0.1231484,0.049226582,0.070499435,0.25008506,0.052357715,0.13869683
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1073.jpg,Grade 0,Grade 0,0.5125961,0.11647639,0.06613214,0.056148883,0.11330701,0.028515087,0.10682438
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1077.jpg,Grade 0,Grade 0,0.3031718,0.17279045,0.08202,0.15472217,0.11012847,0.06541879,0.111748375
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1082.jpg,Grade 0,Grade 0,0.47326067,0.13034977,0.065205164,0.05749658,0.15282947,0.025377821,0.095480524
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1083.jpg,Grade 0,Grade 3,0.08328081,0.07687455,0.17388597,0.41006356,0.13779399,0.10234275,0.015758313
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1092.jpg,Grade 0,Grade 4,0.17777842,0.14027075,0.12320751,0.18955013,0.23692384,0.099683486,0.03258588
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1096.jpg,Grade 0,Grade 0,0.4316522,0.15185148,0.053599097,0.08252907,0.20081636,0.03708181,0.042469952
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1102.jpg,Grade 0,Grade 0,0.3806137,0.1554361,0.085339904,0.04438186,0.2567417,0.028896887,0.04858981
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1115.jpg,Grade 0,Grade 0,0.28464004,0.1347538,0.121893466,0.14538513,0.19606294,0.063905105,0.053359576
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1119.jpg,Grade 0,Grade 0,0.3442884,0.17973334,0.090831205,0.1385406,0.10844323,0.07797039,0.06019277
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/archive_1124.jpg,Grade 0,Grade 0,0.26905474,0.19186641,0.13684422,0.13293156,0.16824406,0.05558962,0.045469392
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_45913.jpg,Grade 0,Grade 2,0.13881934,0.20539635,0.3664276,0.1655918,0.023623195,0.04068239,0.059459288
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_46344.jpg,Grade 0,Grade 0,0.29540277,0.1384162,0.21169797,0.08346855,0.04181353,0.039075285,0.19012573
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_46588.jpg,Grade 0,Grade 2,0.18431354,0.12296069,0.43718433,0.062556155,0.020759966,0.061718073,0.110507295
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_48634.jpg,Grade 0,Grade 2,0.07572941,0.087641284,0.47842908,0.20007169,0.037951242,0.10670037,0.013476934
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_53498.jpg,Grade 0,Grade 2,0.093341485,0.21639906,0.4790664,0.15862328,0.019215524,0.018481007,0.014873167
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_53623.jpg,Grade 0,Grade 2,0.25361282,0.09893826,0.35285702,0.12076498,0.049773175,0.071547374,0.05250629
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_53845.jpg,Grade 0,Grade 2,0.11721721,0.1276994,0.32489508,0.27601156,0.045950875,0.076243296,0.03198257
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 0/v4_55709.jpg,Grade 0,Grade 2,0.1783448,0.18190406,0.3554814,0.13792701,0.03024603,0.062816486,0.053280212
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1310.jpg,Grade 1,Grade 3,0.15560879,0.13699023,0.21777862,0.23940949,0.09697805,0.12810378,0.02513099
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1312.jpg,Grade 1,Grade 0,0.30282035,0.21309637,0.14967683,0.22819379,0.057561737,0.022470986,0.026179938
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1330.jpg,Grade 1,Grade 0,0.30756703,0.21635573,0.14596651,0.14044264,0.11721934,0.052882884,0.019565882
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1332.jpg,Grade 1,Grade 0,0.416619,0.15750554,0.056156617,0.08307522,0.08315138,0.087970644,0.11552161
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1344.jpg,Grade 1,Grade 3,0.16982625,0.11549534,0.16035417,0.23820007,0.18257847,0.11241623,0.021129455
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1353.jpg,Grade 1,Grade 0,0.3207959,0.17326023,0.07516661,0.069274105,0.12466723,0.0916228,0.14521316
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1370.jpg,Grade 1,Grade 4,0.27067426,0.13190302,0.11439162,0.08429557,0.34994957,0.030351128,0.018434847
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1371.jpg,Grade 1,Grade 0,0.3065371,0.21344756,0.1484881,0.12440574,0.13210113,0.036845557,0.038174804
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1372.jpg,Grade 1,Grade 0,0.31040278,0.14442974,0.19761868,0.13308738,0.14870071,0.03864278,0.027117921
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1373.jpg,Grade 1,Grade 4,0.2381546,0.07974737,0.05284156,0.07202462,0.31842026,0.13650028,0.10231131
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1381.jpg,Grade 1,Grade 0,0.3132644,0.15476777,0.13323087,0.2096681,0.11457091,0.040302746,0.034195192
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1387.jpg,Grade 1,Grade 0,0.30366954,0.14489338,0.110898815,0.13132809,0.21087912,0.07281456,0.02551653
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1392.jpg,Grade 1,Grade 1,0.18323055,0.3026474,0.24620172,0.14941417,0.039200544,0.04404044,0.035265185
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1393.jpg,Grade 1,Grade 2,0.20800403,0.16460206,0.26786494,0.20256798,0.08532938,0.052114908,0.019516677
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1395.jpg,Grade 1,Grade 0,0.42764193,0.18273601,0.08119085,0.051282283,0.14692624,0.034089994,0.076132655
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1406.jpg,Grade 1,Grade 1,0.11317619,0.27547485,0.21387461,0.227318,0.0754524,0.054576386,0.040127534
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1408.jpg,Grade 1,Grade 1,0.17607963,0.26054317,0.14679413,0.12941717,0.10334814,0.09519501,0.08862273
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1421.jpg,Grade 1,Grade 0,0.38456744,0.23133335,0.10701989,0.065239765,0.102056906,0.049182348,0.060600325
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1422.jpg,Grade 1,Grade 0,0.40148646,0.17591676,0.10478525,0.1016867,0.12161671,0.025066448,0.06944174
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1437.jpg,Grade 1,Grade 0,0.2922008,0.15344878,0.049573563,0.10236617,0.20584987,0.086544536,0.11001619
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1438.jpg,Grade 1,Grade 0,0.22986765,0.21494256,0.21888016,0.22948594,0.0499604,0.027613075,0.029250227
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1440.jpg,Grade 1,Grade 0,0.3119705,0.25405297,0.09541907,0.119485304,0.150933,0.01685388,0.05128527
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1443.jpg,Grade 1,Grade 0,0.22506978,0.20452699,0.1032883,0.16321637,0.16960712,0.07872188,0.055569563
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1453.jpg,Grade 1,Grade 1,0.15106004,0.286467,0.2361487,0.20360243,0.069204755,0.02527782,0.028239282
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1460.jpg,Grade 1,Grade 0,0.44210556,0.18747275,0.09153976,0.07745235,0.09072775,0.046241768,0.06446014
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1464.jpg,Grade 1,Grade 0,0.50671107,0.100288555,0.055682488,0.06882703,0.12662736,0.051213257,0.09065025
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1465.jpg,Grade 1,Grade 0,0.31431028,0.17925408,0.1175591,0.12159726,0.10585022,0.0961285,0.06530061
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/archive_1476.jpg,Grade 1,Grade 0,0.2593489,0.23840666,0.14999421,0.19033696,0.11046754,0.02692267,0.024523066
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_43130.jpg,Grade 1,Grade 3,0.078785025,0.23461483,0.2110936,0.32307997,0.083713956,0.044137534,0.02457506
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_44236.jpg,Grade 1,Grade 1,0.052734844,0.35449165,0.291511,0.22156647,0.03749522,0.02746494,0.0147359045
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_44306.jpg,Grade 1,Grade 3,0.07229607,0.1497209,0.29229912,0.3319267,0.079978004,0.043955207,0.029824018
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_46549.jpg,Grade 1,Grade 1,0.05983048,0.29389933,0.28768376,0.26983362,0.040171314,0.033672065,0.0149094695
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_46609.jpg,Grade 1,Grade 2,0.052181106,0.2867665,0.3508094,0.24132912,0.018112594,0.041512515,0.009288749
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_48435.jpg,Grade 1,Grade 1,0.05687252,0.37874267,0.23246814,0.23245753,0.046584647,0.037182044,0.01569249
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_48931.jpg,Grade 1,Grade 1,0.054772463,0.38737231,0.2583585,0.2178385,0.038997706,0.025850434,0.016810084
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_50820.jpg,Grade 1,Grade 2,0.08427529,0.2069388,0.34743965,0.28472218,0.027230905,0.035581574,0.013811616
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_51048.jpg,Grade 1,Grade 3,0.04886252,0.23328133,0.26390764,0.3571567,0.03497103,0.049357895,0.012462872
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_51220.jpg,Grade 1,Grade 1,0.035867427,0.29827005,0.29108745,0.2430389,0.04066232,0.07607531,0.014998539
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_51446.jpg,Grade 1,Grade 3,0.04123755,0.27702665,0.2601168,0.3067179,0.033912692,0.07130044,0.009687963
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_51532.jpg,Grade 1,Grade 1,0.055352952,0.48966816,0.21731664,0.19139951,0.018573772,0.015801828,0.0118871685
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_51736.jpg,Grade 1,Grade 1,0.12521137,0.39227578,0.18228135,0.12554759,0.01813478,0.10869223,0.047856927
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_53390.jpg,Grade 1,Grade 2,0.04144787,0.22014694,0.3134474,0.31072518,0.028655235,0.07550815,0.010069223
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_53507.jpg,Grade 1,Grade 1,0.060620144,0.3278542,0.24981421,0.17958894,0.07884287,0.07756282,0.025716867
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_53569.jpg,Grade 1,Grade 2,0.23227839,0.13108735,0.2941833,0.1439457,0.048887294,0.07130754,0.07831041
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_53590.jpg,Grade 1,Grade 1,0.0755107,0.2765727,0.27023664,0.22572595,0.08623942,0.053686623,0.012027963
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_53844.jpg,Grade 1,Grade 1,0.049876276,0.37648043,0.31293485,0.1598069,0.03737874,0.04626045,0.017262336
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_55597.jpg,Grade 1,Grade 1,0.072564624,0.41428328,0.17811643,0.20494644,0.021593474,0.0777255,0.030770257
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_55619.jpg,Grade 1,Grade 2,0.071236044,0.2737902,0.38746974,0.18399203,0.035982613,0.03742539,0.010104007
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_55627.jpg,Grade 1,Grade 2,0.06311086,0.22428864,0.30362037,0.28396806,0.050403226,0.054909106,0.019699775
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_55741.jpg,Grade 1,Grade 3,0.074225724,0.25165012,0.20595604,0.27899343,0.10725798,0.057898615,0.024018029
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 1/v4_55751.jpg,Grade 1,Grade 2,0.03745292,0.22464342,0.28253576,0.23413102,0.09717998,0.10913528,0.014921609
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1203.jpg,Grade 2,Grade 1,0.12424606,0.33149835,0.24473809,0.19146952,0.05105983,0.041497547,0.0154905375
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1214.jpg,Grade 2,Grade 0,0.27150956,0.24694616,0.13259284,0.10407985,0.15020709,0.0567854,0.037879057
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1224.jpg,Grade 2,Grade 4,0.20649676,0.14973865,0.09169696,0.20735897,0.22302929,0.098657995,0.023021337
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1234.jpg,Grade 2,Grade 1,0.18791737,0.24736811,0.15260996,0.16884865,0.14049424,0.049990214,0.05277142
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1245.jpg,Grade 2,Grade 3,0.09487112,0.17061292,0.14967899,0.26840955,0.1730864,0.12993991,0.013401152
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1246.jpg,Grade 2,Grade 0,0.2842557,0.16924846,0.23604637,0.17171629,0.087461345,0.03442218,0.016849658
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1252.jpg,Grade 2,Grade 2,0.12842223,0.1802888,0.30918056,0.2195898,0.05260185,0.081411526,0.028505247
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1253.jpg,Grade 2,Grade 4,0.2401876,0.1143134,0.118836105,0.2064464,0.24831015,0.0480999,0.02380638
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1254.jpg,Grade 2,Grade 3,0.16770782,0.18859161,0.13632646,0.26929086,0.07759932,0.13056481,0.029919151
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1262.jpg,Grade 2,Grade 0,0.19779986,0.18630238,0.19642627,0.19060625,0.10279676,0.08015678,0.045911755
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1263.jpg,Grade 2,Grade 3,0.100296624,0.19838503,0.16101101,0.264296,0.12465724,0.13374446,0.017609654
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1264.jpg,Grade 2,Grade 4,0.05223613,0.07165644,0.05956244,0.1498359,0.57442623,0.08365297,0.008629904
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/archive_1278.jpg,Grade 2,Grade 3,0.16118811,0.17851591,0.15913346,0.28309026,0.14575002,0.05784806,0.014474143
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_31831.jpg,Grade 2,Grade 2,0.15325749,0.16508025,0.37673703,0.1820449,0.048090417,0.041751605,0.03303827
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_44132.jpg,Grade 2,Grade 2,0.029205078,0.097177245,0.58915216,0.118236616,0.04564329,0.113996565,0.006589051
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_44302.jpg,Grade 2,Grade 2,0.07200525,0.050815243,0.4759697,0.23493247,0.06827532,0.079726495,0.018275479
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_45582.jpg,Grade 2,Grade 3,0.08492485,0.12657548,0.30686665,0.40857828,0.025474992,0.03809249,0.009487294
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_46589.jpg,Grade 2,Grade 2,0.06180169,0.076679796,0.47038168,0.249477,0.019655362,0.108831644,0.013172863
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_47912.jpg,Grade 2,Grade 2,0.119670615,0.08959172,0.3327489,0.23005705,0.0784845,0.12741742,0.022029862
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48295.jpg,Grade 2,Grade 2,0.08898655,0.108341314,0.3694947,0.18971607,0.044231158,0.18388231,0.0153478505
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48306.jpg,Grade 2,Grade 2,0.026394265,0.11943852,0.4266242,0.33423585,0.023122057,0.06444403,0.005741097
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48656.jpg,Grade 2,Grade 2,0.0357968,0.13041374,0.37816927,0.24915215,0.061338622,0.13516475,0.00996469
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48703.jpg,Grade 2,Grade 2,0.13302183,0.14668466,0.3085977,0.2431943,0.055008844,0.091381125,0.022111587
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48849.jpg,Grade 2,Grade 2,0.058397897,0.073475316,0.26704443,0.21610278,0.11617736,0.22336747,0.045434743
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48883.jpg,Grade 2,Grade 1,0.09992312,0.29980338,0.24267791,0.19934349,0.054529212,0.060237695,0.04348518
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_48924.jpg,Grade 2,Grade 2,0.0990226,0.06718181,0.2923355,0.12235677,0.09571629,0.27189606,0.051490985
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_50360.jpg,Grade 2,Grade 2,0.037123658,0.20095727,0.34341124,0.2631689,0.042023063,0.10332849,0.009987346
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_51466.jpg,Grade 2,Grade 1,0.07264915,0.3302415,0.21725994,0.15992613,0.04172115,0.1355718,0.04263028
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_51535.jpg,Grade 2,Grade 2,0.03177989,0.09285176,0.56111,0.10533897,0.066999264,0.13383538,0.008084743
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53489.jpg,Grade 2,Grade 2,0.03100593,0.09096518,0.50937647,0.26214147,0.042736765,0.057634115,0.006140111
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53627.jpg,Grade 2,Grade 2,0.06131095,0.08139823,0.48954198,0.10498255,0.0897529,0.15525547,0.017758032
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53635.jpg,Grade 2,Grade 2,0.13280421,0.08854856,0.49293697,0.17083229,0.027308313,0.054834664,0.03273495
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53650.jpg,Grade 2,Grade 2,0.10181364,0.16306423,0.3817882,0.21356323,0.05249277,0.077219635,0.010058308
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53807.jpg,Grade 2,Grade 3,0.03607687,0.14037435,0.23126107,0.33183378,0.04205887,0.1982085,0.020186577
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_53809.jpg,Grade 2,Grade 2,0.055247493,0.0679489,0.3369857,0.17314592,0.10902895,0.24855223,0.009090794
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_55533.jpg,Grade 2,Grade 3,0.036184356,0.20744771,0.19613157,0.3271842,0.040207073,0.18178271,0.0110624265
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_55621.jpg,Grade 2,Grade 2,0.054873727,0.076840065,0.5570505,0.20728531,0.016826956,0.07344902,0.013674406
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 2/v4_55772.jpg,Grade 2,Grade 2,0.021071969,0.089260966,0.43900883,0.20198978,0.056126192,0.1854804,0.007061912
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1488.jpg,Grade 3,Grade 3,0.049558353,0.110966444,0.13092276,0.4686887,0.16726466,0.0659661,0.006632971
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1495.jpg,Grade 3,Grade 1,0.17442836,0.28291482,0.124128684,0.13247925,0.16832808,0.084435396,0.033285424
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1498.jpg,Grade 3,Grade 4,0.18376294,0.10771835,0.09079903,0.17468774,0.32924396,0.07462789,0.03916009
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1499.jpg,Grade 3,Grade 3,0.104977615,0.28766325,0.15352622,0.30815408,0.10451813,0.028947879,0.012212759
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1503.jpg,Grade 3,Grade 3,0.053684797,0.0986676,0.20877807,0.38304538,0.1631785,0.08116585,0.011479778
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1506.jpg,Grade 3,Grade 2,0.137203,0.15171099,0.27406076,0.24474484,0.08305139,0.061771482,0.047457542
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1514.jpg,Grade 3,Grade 3,0.13132799,0.13740245,0.14683004,0.31570724,0.17639707,0.07853059,0.01380463
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1516.jpg,Grade 3,Grade 3,0.048031475,0.10254644,0.21091029,0.3072674,0.18030077,0.12803958,0.022904003
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1521.jpg,Grade 3,Grade 3,0.20956597,0.16334493,0.11754644,0.22205836,0.19684985,0.07133635,0.019298026
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1527.jpg,Grade 3,Grade 3,0.03880202,0.16246061,0.26429468,0.3647432,0.08972249,0.07387286,0.0061041648
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1531.jpg,Grade 3,Grade 1,0.13129555,0.2277825,0.16173488,0.21947868,0.17590237,0.07164317,0.012162864
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1534.jpg,Grade 3,Grade 3,0.094346836,0.12302093,0.14134991,0.28598103,0.22581682,0.12140004,0.008084492
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1538.jpg,Grade 3,Grade 3,0.06265826,0.117406115,0.14223838,0.4107509,0.18163364,0.07771696,0.007595798
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1541.jpg,Grade 3,Grade 1,0.10614724,0.27473712,0.21441354,0.26513633,0.088566184,0.038486402,0.012513199
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1552.jpg,Grade 3,Grade 3,0.06943913,0.16305621,0.29672274,0.3721034,0.04462348,0.04393725,0.010117852
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1554.jpg,Grade 3,Grade 3,0.1915529,0.18798642,0.12217931,0.22976959,0.18107395,0.060143553,0.027294232
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1556.jpg,Grade 3,Grade 3,0.14527531,0.14870177,0.17629942,0.28294778,0.1356254,0.089888655,0.021261638
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1561.jpg,Grade 3,Grade 3,0.11736209,0.13665101,0.16856521,0.332742,0.17176819,0.06324009,0.009671392
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1581.jpg,Grade 3,Grade 3,0.07329253,0.08899871,0.21448366,0.44103545,0.092008054,0.08125429,0.008927278
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/archive_1584.jpg,Grade 3,Grade 3,0.09771633,0.20873167,0.11887088,0.32245997,0.13273267,0.10262282,0.016865661
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_48666.jpg,Grade 3,Grade 5,0.022544798,0.057947062,0.2991647,0.26955512,0.04167843,0.30208206,0.0070277825
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_48706.jpg,Grade 3,Grade 5,0.046332303,0.04247693,0.25830057,0.21259898,0.072494246,0.35791674,0.009880301
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_48860.jpg,Grade 3,Grade 5,0.019799633,0.05420304,0.1329218,0.34447813,0.061230063,0.378299,0.009068249
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_48972.jpg,Grade 3,Grade 3,0.019840574,0.06255232,0.14614142,0.3453287,0.101946205,0.3176173,0.006573492
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_51614.jpg,Grade 3,Grade 5,0.050604053,0.07921153,0.15424922,0.21235551,0.03912897,0.42887563,0.035575133
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_53401.jpg,Grade 3,Grade 2,0.08754138,0.09323571,0.3852978,0.25649098,0.04211911,0.123582706,0.01173237
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_55576.jpg,Grade 3,Grade 5,0.04861566,0.10164057,0.13066624,0.11601415,0.07823827,0.51748985,0.007335263
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_55595.jpg,Grade 3,Grade 2,0.031221045,0.07727868,0.29817203,0.29707518,0.079578154,0.20686564,0.009809262
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 3/v4_55740.jpg,Grade 3,Grade 2,0.12883326,0.066016376,0.26843587,0.17634216,0.06932058,0.20364307,0.087408684
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1126.jpg,Grade 4,Grade 4,0.0768885,0.08303126,0.18421416,0.17506808,0.33335876,0.13161044,0.01582877
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1129.jpg,Grade 4,Grade 4,0.050765045,0.1082424,0.061516915,0.16007988,0.5785951,0.0292667,0.011533881
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1130.jpg,Grade 4,Grade 4,0.108322926,0.06693676,0.11574375,0.26847196,0.3765669,0.05504628,0.0089113945
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1136.jpg,Grade 4,Grade 0,0.30522782,0.0948146,0.05514698,0.08853107,0.26231146,0.14176261,0.052205473
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1145.jpg,Grade 4,Grade 3,0.030947106,0.10512696,0.19174074,0.36611706,0.21034074,0.08439648,0.011330955
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1148.jpg,Grade 4,Grade 4,0.06367514,0.045472126,0.046976347,0.0634716,0.6426868,0.118126675,0.019591307
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1151.jpg,Grade 4,Grade 4,0.25571588,0.09304283,0.056731705,0.07608993,0.42228466,0.041136738,0.05499819
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1155.jpg,Grade 4,Grade 4,0.074292295,0.13446313,0.06621606,0.16145094,0.48588565,0.054705735,0.022986108
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1163.jpg,Grade 4,Grade 4,0.10252216,0.078317426,0.0473768,0.14349489,0.4124953,0.19124459,0.024548883
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1168.jpg,Grade 4,Grade 4,0.08104203,0.0690122,0.083060965,0.23164023,0.41756925,0.1091543,0.008520981
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1178.jpg,Grade 4,Grade 4,0.089617364,0.04500157,0.03853435,0.077338874,0.63590884,0.09110868,0.022490267
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1188.jpg,Grade 4,Grade 4,0.041916866,0.035821777,0.053211916,0.104899205,0.637766,0.11245807,0.013926178
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_1189.jpg,Grade 4,Grade 4,0.058465395,0.04200172,0.12694004,0.15955521,0.5226906,0.07903916,0.011307901
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 4/archive_52784.jpg,Grade 4,Grade 5,0.13010824,0.11514547,0.12996282,0.1843469,0.1537621,0.25902215,0.027652355
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 5/archive_48810.jpg,Grade 5,Grade 5,0.023499073,0.029297564,0.06020973,0.07550494,0.108846694,0.6875755,0.015066467
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 5/archive_52323.jpg,Grade 5,Grade 5,0.025180347,0.028561676,0.09739208,0.1444111,0.1915466,0.5081319,0.00477624
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Grade 5/archive_52699.jpg,Grade 5,Grade 5,0.01874028,0.01612626,0.055962067,0.071990095,0.04973335,0.7824059,0.0050419564
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_58556.jpg,Normal,Normal,0.060621805,0.01661668,0.009301057,0.010859001,0.041466914,0.08266237,0.7784721
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_58559.jpg,Normal,Normal,0.106004275,0.042820405,0.026439099,0.033131,0.11155313,0.061142523,0.61890954
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_58651.jpg,Normal,Normal,0.063783795,0.020829711,0.005760575,0.010910009,0.0301825,0.018764568,0.8497689
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_58830.jpg,Normal,Normal,0.07611502,0.01635258,0.008341383,0.011851776,0.05962309,0.043033946,0.78468215
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_58946.jpg,Normal,Normal,0.069885865,0.035896707,0.017560765,0.029806174,0.079095565,0.037351657,0.73040324
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59069.jpg,Normal,Normal,0.09638445,0.026789721,0.015165961,0.017741073,0.05807174,0.06497316,0.72087383
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59286.jpg,Normal,Normal,0.07228258,0.03818702,0.017237758,0.021128079,0.06368025,0.04825409,0.7392302
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59533.jpg,Normal,Normal,0.08631661,0.030155396,0.007424265,0.0091845235,0.053138737,0.0121777905,0.8016028
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59667.jpg,Normal,Normal,0.043793976,0.018805858,0.00838463,0.009237434,0.02679572,0.013022664,0.87995964
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59746.jpg,Normal,Normal,0.07061895,0.0270624,0.008475129,0.010258334,0.033299193,0.01616197,0.83412397
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59815.jpg,Normal,Normal,0.06343398,0.024031496,0.011792897,0.011201329,0.034267668,0.03364471,0.8216279
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59892.jpg,Normal,Normal,0.0564341,0.017938208,0.0075624995,0.0076890565,0.024430284,0.01869957,0.86724627
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59976.jpg,Normal,Normal,0.07152856,0.027188793,0.0136092575,0.012956962,0.045579873,0.045983776,0.7831528
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_59992.jpg,Normal,Normal,0.10068747,0.043036126,0.016681384,0.027701339,0.09283361,0.06333086,0.6557292
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60175.jpg,Normal,Normal,0.10178385,0.032365836,0.013194215,0.020818802,0.07860683,0.06538299,0.6878475
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60179.jpg,Normal,Normal,0.08299905,0.02971367,0.0108480435,0.012689974,0.049951807,0.020838454,0.7929589
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60282.jpg,Normal,Normal,0.07074932,0.045704395,0.045870487,0.04726308,0.12559299,0.06001719,0.60480255
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60340.jpg,Normal,Normal,0.13838352,0.030245928,0.017243754,0.013702943,0.065331064,0.039949782,0.69514304
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60342.jpg,Normal,Normal,0.17600077,0.085859455,0.038349647,0.035761867,0.1215095,0.052299533,0.49021924
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60509.jpg,Normal,Normal,0.06783777,0.036160585,0.023230758,0.038064018,0.111536846,0.044101305,0.6790687
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60585.jpg,Normal,Normal,0.07874347,0.02403758,0.013149094,0.012117476,0.044815898,0.026932096,0.8002044
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60642.jpg,Normal,Normal,0.15399729,0.04852817,0.024157668,0.021523569,0.08228954,0.091461375,0.57804245
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60649.jpg,Normal,Normal,0.092211105,0.03249453,0.014564205,0.020717826,0.061784793,0.031290833,0.74693674
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60846.jpg,Normal,Normal,0.084879644,0.027879816,0.010848442,0.020083088,0.066859044,0.0925417,0.69690835
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_60890.jpg,Normal,Normal,0.049707007,0.022243937,0.013396062,0.011302104,0.043304883,0.031060668,0.82898545
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_61002.jpg,Normal,Normal,0.058627386,0.016169585,0.0052596754,0.006276778,0.032746658,0.017773973,0.86314595
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_61075.jpg,Normal,Normal,0.07729149,0.032386474,0.013902567,0.020025095,0.062824465,0.083625846,0.70994407
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_61120.jpg,Normal,Normal,0.14845082,0.05694233,0.026222428,0.025844207,0.09843987,0.027319003,0.6167814
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/mendeley_61138.jpg,Normal,Normal,0.13849922,0.045117803,0.014099152,0.020616012,0.082993306,0.043935295,0.6547392
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_24480.jpg,Normal,Normal,0.14142723,0.07161279,0.07249808,0.022345515,0.028152203,0.037237607,0.62672657
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_24535.jpg,Normal,Normal,0.1478931,0.08571739,0.028063659,0.03694483,0.020666575,0.030956434,0.64975804
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_24564.jpg,Normal,Normal,0.14167142,0.06525362,0.064607754,0.03683733,0.012952939,0.046674028,0.63200295
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_26906.jpg,Normal,Normal,0.22893016,0.110413134,0.24631996,0.0440406,0.016694708,0.04674498,0.3068565
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_27409.jpg,Normal,Normal,0.22012107,0.096233144,0.11698184,0.026679367,0.015502076,0.021454312,0.50302815
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_27662.jpg,Normal,Normal,0.14414957,0.09806964,0.08992811,0.06750413,0.01493587,0.029511662,0.55590105
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_27734.jpg,Normal,Normal,0.16240188,0.08437944,0.07244543,0.027017001,0.01262959,0.018666537,0.6224601
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_28053.jpg,Normal,Normal,0.1192304,0.05732027,0.032393288,0.016544124,0.0075724865,0.017801996,0.74913746
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_28061.jpg,Normal,Normal,0.07462426,0.042436074,0.016064186,0.017593198,0.028750079,0.019242115,0.80129015
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_2833.jpeg,Normal,Grade 1,0.2176109,0.32318017,0.0520413,0.12996386,0.1014299,0.043735344,0.13203855
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_28799.jpg,Normal,Normal,0.29749772,0.10817502,0.19384965,0.034105673,0.012715071,0.031518072,0.3221388
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_2882.jpeg,Normal,Normal,0.12300152,0.097632796,0.035531413,0.049849004,0.0578958,0.0796092,0.5564802
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_3181.jpeg,Normal,Normal,0.15254976,0.20123942,0.08562284,0.045536775,0.018658383,0.08431789,0.4120749
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53855.jpg,Normal,Normal,0.25714725,0.08441518,0.09108126,0.020385258,0.02293162,0.022179142,0.50186026
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53872.jpg,Normal,Normal,0.11543199,0.045249667,0.035626333,0.023770483,0.031225055,0.06515318,0.68354326
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53880.jpg,Normal,Normal,0.100566365,0.066959165,0.019979905,0.015983954,0.025439808,0.018843062,0.7522278
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53890.jpg,Normal,Normal,0.23915818,0.10136654,0.060120042,0.03890885,0.025767392,0.06609254,0.4685864
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53901.jpg,Normal,Normal,0.11903194,0.060268622,0.031087283,0.022228582,0.018044222,0.09823675,0.6511026
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53903.jpg,Normal,Normal,0.22238554,0.13106956,0.09494636,0.06413314,0.019209336,0.09428301,0.373973
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53917.jpg,Normal,Normal,0.096104845,0.03819403,0.015464132,0.019655516,0.010678421,0.05108761,0.76881546
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53921.jpg,Normal,Normal,0.118169345,0.044520102,0.03675369,0.012605926,0.008427932,0.062284354,0.71723866
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53922.jpg,Normal,Grade 0,0.33004624,0.17564733,0.16562851,0.039216597,0.02139188,0.0092321,0.2588374
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53923.jpg,Normal,Normal,0.08295255,0.03614493,0.034877863,0.022176633,0.0070325457,0.025150228,0.79166526
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53928.jpg,Normal,Normal,0.14977206,0.04247319,0.027602332,0.017073205,0.013692048,0.051814195,0.6975729
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53929.jpg,Normal,Normal,0.20655411,0.09358481,0.20525715,0.023487123,0.020854723,0.06644185,0.3838202
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53930.jpg,Normal,Normal,0.17737181,0.063807115,0.09415937,0.024078665,0.025452405,0.059099983,0.5560307
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53936.jpg,Normal,Normal,0.096980505,0.033379775,0.020577399,0.009666215,0.014385055,0.0484711,0.77654004
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53942.jpg,Normal,Normal,0.13770717,0.057600144,0.03411121,0.018129976,0.03322565,0.019323071,0.6999027
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53957.jpg,Normal,Normal,0.19261667,0.13855585,0.104097486,0.025025992,0.02083642,0.02735409,0.49151346
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53971.jpg,Normal,Normal,0.19331793,0.07964482,0.060210254,0.02700758,0.04166787,0.08835275,0.5097988
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53972.jpg,Normal,Normal,0.10075427,0.04279869,0.022432486,0.015657818,0.017163854,0.05260746,0.74858546
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53975.jpg,Normal,Normal,0.10898014,0.05723381,0.0372834,0.01589673,0.026440402,0.016959678,0.7372058
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53992.jpg,Normal,Normal,0.12834094,0.09354643,0.041785453,0.05040389,0.06012521,0.043555874,0.5822423
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_53997.jpg,Normal,Normal,0.22342184,0.110833675,0.11943933,0.073578335,0.01377785,0.10649209,0.35245684
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54006.jpg,Normal,Grade 0,0.3346311,0.13916713,0.16290613,0.05369798,0.025076384,0.021717634,0.26280376
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54017.jpg,Normal,Normal,0.24816673,0.16356656,0.1982382,0.08873899,0.019171594,0.029773936,0.25234398
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54021.jpg,Normal,Normal,0.10611702,0.033920005,0.027732374,0.017861348,0.024937104,0.07445298,0.7149791
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54023.jpg,Normal,Normal,0.19143213,0.20060824,0.07315787,0.059448306,0.018273178,0.038346056,0.41873422
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54026.jpg,Normal,Normal,0.11055502,0.065762974,0.03706926,0.020759495,0.021763118,0.1646912,0.57939893
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54027.jpg,Normal,Normal,0.11696596,0.05780013,0.058981914,0.023113508,0.03463438,0.025463114,0.68304104
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54030.jpg,Normal,Normal,0.16958083,0.10221175,0.019530289,0.018387806,0.035808127,0.04928589,0.6051953
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54039.jpg,Normal,Normal,0.19211884,0.07741962,0.049909215,0.023003576,0.022096226,0.0501634,0.5852891
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54040.jpg,Normal,Normal,0.21762966,0.14952612,0.17209892,0.056423523,0.030297289,0.057596225,0.31642824
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54044.jpg,Normal,Normal,0.102645054,0.057215936,0.031827074,0.016856832,0.031464487,0.014686663,0.7453039
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54053.jpg,Normal,Normal,0.08956726,0.032935012,0.024293965,0.015669521,0.009356106,0.02550368,0.8026744
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54054.jpg,Normal,Normal,0.14354019,0.07333767,0.060542192,0.013142623,0.007526556,0.019037519,0.6828732
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54058.jpg,Normal,Normal,0.10720787,0.060788006,0.031626932,0.014762824,0.042065952,0.06327504,0.68027335
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54067.jpg,Normal,Normal,0.11777556,0.057561222,0.018887706,0.013947929,0.0076594157,0.021206753,0.7629613
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54088.jpg,Normal,Normal,0.34971607,0.12249487,0.05657484,0.03659079,0.042204317,0.030465184,0.3619539
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54092.jpg,Normal,Normal,0.21211606,0.10803786,0.15993728,0.08471397,0.032852057,0.038680475,0.36366227
+/home/augustocrmg/Repos/CLAUCIA-ML/datasets/dataset_wagner_v7_balanced/fold1/teste/Normal/v4_54094.jpg,Normal,Normal,0.1280884,0.039558016,0.015958412,0.008542327,0.010913671,0.02254489,0.7743943

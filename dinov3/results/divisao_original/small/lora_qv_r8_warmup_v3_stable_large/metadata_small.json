@@ -1,0 +1,57 @@
+{
+  "experiment_name": "lora_qv_r8_warmup_v3_stable_large",
+  "model_size": "small",
+  "model_id": "facebook/dinov3-vits16-pretrain-lvd1689m",
+  "image_size": 224,
+  "class_to_idx": {
+    "Grade 0": 0,
+    "Grade 1": 1,
+    "Grade 2": 2,
+    "Grade 3": 3,
+    "Grade 4": 4,
+    "Grade 5": 5,
+    "Normal(Healthy skin)": 6
+  },
+  "idx_to_class": {
+    "0": "Grade 0",
+    "1": "Grade 1",
+    "2": "Grade 2",
+    "3": "Grade 3",
+    "4": "Grade 4",
+    "5": "Grade 5",
+    "6": "Normal(Healthy skin)"
+  },
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.2,
+  "lora_target_modules": [
+    "q_proj",
+    "v_proj",
+    "k_proj",
+    "o_proj",
+    "up_proj",
+    "down_proj"
+  ],
+  "head_warmup_epochs": 3,
+  "lr_lora_initial": 5e-05,
+  "lr_head_initial": 5e-05,
+  "weight_decay": 0.0005,
+  "label_smoothing": 0.05,
+  "classifier_dropout": 0.3,
+  "best_epoch": 6,
+  "best_val_metrics": {
+    "accuracy": 0.8828571428571429,
+    "precision": 0.885576899163285,
+    "recall": 0.8828571428571429,
+    "f1": 0.881450482064823,
+    "auc_roc": 0.9874031746031745,
+    "auc_pr": 0.9347128244679063
+  },
+  "train_accuracy": 0.933469387755102,
+  "test_accuracy": 0.8152380952380952,
+  "test_precision_macro": 0.8575124023609625,
+  "test_recall_macro": 0.8152380952380952,
+  "test_f1_macro": 0.8005613847393461,
+  "test_auc_roc_macro": 0.9746222222222222,
+  "test_auc_pr_macro": 0.8947013660772368
+}

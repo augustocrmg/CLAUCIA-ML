@@ -1,0 +1,32 @@
+# Machine Learning Core
+# IMPORTANTE: Para GPU AMD, use Docker em vez de instalação local!
+# Execute: docker pull rocm/tensorflow:latest
+# Use: ./run_tensorflow_docker.sh python seu_script.py
+#
+# Para instalação local (NÃO RECOMENDADO para GPU AMD):
+tensorflow>=2.16.0
+keras>=3.5.0
+scikit-learn>=1.1.0
+numpy>=1.21.0
+
+# Data Processing and Visualization
+pandas>=1.4.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Image Processing
+Pillow>=9.0.0
+opencv-python>=4.5.0
+
+# ML Experiment Tracking
+mlflow>=2.0.0
+
+# Progress Bars and Utilities
+tqdm>=4.62.0
+
+# Optional dependencies for Google Colab (if using)
+# google-colab>=1.0.0
+
+# Additional utilities that may be needed
+# ipython>=8.0.0
+# jupyter>=1.0.0 

@@ -1,15 +1,42 @@
-datasets
-mlruns/*
-logs/*
-*.h5
-*.png
-*.json
+# Dados e artefatos de treino (mantidos apenas localmente)
+datasets/
+mlruns/
+**/mlruns/
+logs/
+**/logs/
+execution_logs/
+model_results_colab/
+models_results/
+models_trained/
+model_checkpoint/
+results_relatory/
+plot_results/
+old/
+to_mod/
+dinov3/modelos_hf/
+dinov3/tflite*/
+dinov3/device_bench/
+dinov3/resultados*/
+dinov3/*.parquet
 
+# Pesos e modelos exportados
 *.h5
-*.png
-*.json
-*.log
-**/mlruns/*
-**/*.pyc
+*.keras
 *.tflite
-**/*.tflite
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.bin
+*.zip
+
+# Python, notebooks e logs
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.log
+
+# Saídas geradas pelos treinos das CNNs
+cnn_baselines/models/**/*.png
+cnn_baselines/models/**/*.json

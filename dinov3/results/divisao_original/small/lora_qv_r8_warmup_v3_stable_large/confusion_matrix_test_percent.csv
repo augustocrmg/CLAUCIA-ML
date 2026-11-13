@@ -1,0 +1,8 @@
+classe_real,Predita: Grade 0,Predita: Grade 1,Predita: Grade 2,Predita: Grade 3,Predita: Grade 4,Predita: Grade 5,Predita: Normal(Healthy skin)
+Real: Grade 0,88.66666666666667,0.0,0.6666666666666667,0.0,0.0,0.0,10.666666666666668
+Real: Grade 1,14.000000000000002,86.0,0.0,0.0,0.0,0.0,0.0
+Real: Grade 2,10.666666666666668,0.0,66.66666666666666,22.666666666666664,0.0,0.0,0.0
+Real: Grade 3,0.0,0.0,0.6666666666666667,99.33333333333333,0.0,0.0,0.0
+Real: Grade 4,0.0,0.0,0.0,0.0,100.0,0.0,0.0
+Real: Grade 5,0.0,0.0,2.666666666666667,30.0,33.33333333333333,34.0,0.0
+Real: Normal(Healthy skin),4.0,0.0,0.0,0.0,0.0,0.0,96.0

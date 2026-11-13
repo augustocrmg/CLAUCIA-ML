@@ -1,0 +1,6 @@
+# Conversão para LiteRT e quantização (ambiente separado do treino).
+torch==2.14.1
+litert-torch==0.10.0
+ai-edge-litert==2.3.0
+ai-edge-quantizer==0.10.1
+litert-converter==0.5.0
